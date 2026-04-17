@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { slides } from '../lib/slides'
 import { brand } from '../lib/brand'
 
@@ -133,18 +133,21 @@ export default function DeckShell() {
             position: 'relative',
           }}
         >
-          <motion.div
-            key={current.id}
-            initial={{ x: direction > 0 ? 48 : -48, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            style={{
-              position: 'absolute',
-              inset: 0,
-            }}
-          >
-            <current.component />
-          </motion.div>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={current.id}
+              initial={{ x: direction > 0 ? 24 : -24, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction > 0 ? -24 : 24, opacity: 0 }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              style={{
+                position: 'absolute',
+                inset: 0,
+              }}
+            >
+              <current.component />
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 

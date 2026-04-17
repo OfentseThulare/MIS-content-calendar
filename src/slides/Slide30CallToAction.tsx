@@ -36,12 +36,13 @@ export default function Slide30CallToAction() {
         style={{
           position: 'relative',
           width: '100%',
-          height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
           gap: 36,
           maxWidth: 1500,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingTop: 24,
         }}
       >
         <div>
