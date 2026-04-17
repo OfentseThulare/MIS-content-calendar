@@ -2,11 +2,12 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 import { AnimatePresence, motion } from 'framer-motion'
 import { slides } from '../lib/slides'
 import { brand } from '../lib/brand'
+import { SlidePositionContext } from '../lib/slide-position-context'
 
 export default function DeckShell() {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(1)
-  const SAFE_BUFFER = 32
+  const SAFE_BUFFER = 48
   const computeScale = () => {
     if (typeof window === 'undefined') return 1
     return Math.min(
@@ -145,7 +146,9 @@ export default function DeckShell() {
                 inset: 0,
               }}
             >
-              <current.component />
+              <SlidePositionContext.Provider value={{ page: index + 1, total }}>
+                <current.component />
+              </SlidePositionContext.Provider>
             </motion.div>
           </AnimatePresence>
         </div>

@@ -1,5 +1,6 @@
-import type { CSSProperties, ReactNode } from 'react'
+import { useContext, type CSSProperties, type ReactNode } from 'react'
 import { brand } from '../lib/brand'
+import { SlidePositionContext } from '../lib/slide-position-context'
 
 type SlideFrameProps = {
   children: ReactNode
@@ -26,6 +27,9 @@ export default function SlideFrame({
 }: SlideFrameProps) {
   const resolvedTextColor =
     textColor ?? (bg === brand.colors.darkGreen ? brand.colors.lightBg : brand.colors.bodyText)
+  const position = useContext(SlidePositionContext)
+  const effectivePage = pageNumber ?? position.page
+  const effectiveTotal = totalPages ?? position.total
 
   return (
     <div
@@ -118,9 +122,7 @@ export default function SlideFrame({
               fontVariantNumeric: 'tabular-nums',
             }}
           >
-            {pageNumber !== undefined && totalPages !== undefined
-              ? `${String(pageNumber).padStart(2, '0')} / ${String(totalPages).padStart(2, '0')}`
-              : ''}
+            {`${String(effectivePage).padStart(2, '0')} / ${String(effectiveTotal).padStart(2, '0')}`}
           </div>
         </div>
       ) : null}
