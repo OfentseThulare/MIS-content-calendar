@@ -54,21 +54,17 @@ export default function SlideCreativeTreatment() {
           </div>
         </div>
 
-        <div
+        <img
+          src="/page27-moodboard.svg"
+          alt="MIS 2026 creative direction moodboard"
           style={{
-            width: '100%',
-            aspectRatio: '4 / 3',
-            borderRadius: 8,
-            overflow: 'hidden',
-            boxShadow: '0 18px 48px rgba(15, 30, 18, 0.18)',
+            maxWidth: '100%',
+            maxHeight: '100%',
+            width: 'auto',
+            height: 'auto',
+            display: 'block',
           }}
-        >
-          <img
-            src="/page27-moodboard.svg"
-            alt="MIS 2026 creative direction moodboard"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
+        />
       </div>
     </SlideFrame>
   )

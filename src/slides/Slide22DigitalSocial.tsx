@@ -58,29 +58,15 @@ export default function Slide22DigitalSocial() {
             </div>
           </div>
 
-          <div
-            style={{
-              width: '100%',
-              height: '100%',
-              background: brand.colors.sand,
-              borderRadius: 6,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 48,
-              position: 'relative',
-              overflow: 'hidden',
-            }}
-          >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
               src="/atlas-logo-hero.png"
               alt="Atlas Consulting Group"
               style={{
-                maxWidth: '78%',
-                maxHeight: '78%',
+                maxWidth: '100%',
+                maxHeight: '100%',
                 width: 'auto',
                 height: 'auto',
-                objectFit: 'contain',
                 display: 'block',
               }}
             />
