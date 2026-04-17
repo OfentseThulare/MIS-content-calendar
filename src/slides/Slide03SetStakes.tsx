@@ -3,7 +3,7 @@ import SlideFrame from '../components/SlideFrame'
 
 export default function Slide03SetStakes() {
   return (
-    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={3} totalPages={31}>
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={3} totalPages={39}>
       <div
         style={{
           width: '100%',

@@ -2,15 +2,33 @@ import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
 import GoldCheckerboard from '../components/GoldCheckerboard'
 
+const approvals: Array<{ n: string; title: string; detail: string }> = [
+  {
+    n: '01',
+    title: 'Approve the scope and investment',
+    detail: 'R415,620 Atlas retainer across three months, plus R500,000 client-controlled ad budget.',
+  },
+  {
+    n: '02',
+    title: 'Approve the six named sponsor targets',
+    detail: 'Sibanye-Stillwater, Harmony Gold, NYDA, Impala or Northam, OEM suppliers, Bojanala District Municipality.',
+  },
+  {
+    n: '03',
+    title: 'Approve Atlas to start on Monday',
+    detail: 'Week 1 deliverables begin on signature. Full system live inside fourteen days.',
+  },
+]
+
 export default function Slide30CallToAction() {
   return (
-    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg}>
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={39} totalPages={39}>
       <div
         style={{
           position: 'absolute',
           inset: 0,
           background:
-            'radial-gradient(ellipse at 50% 20%, rgba(226,187,57,0.12) 0%, rgba(38,69,39,0.0) 60%)',
+            'radial-gradient(ellipse at 50% 10%, rgba(226,187,57,0.10) 0%, rgba(38,69,39,0.0) 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -21,57 +39,74 @@ export default function Slide30CallToAction() {
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
           justifyContent: 'center',
-          textAlign: 'center',
+          gap: 36,
+          maxWidth: 1500,
         }}
       >
-        <div style={{ fontSize: 24, color: brand.colors.lightBg, letterSpacing: '0.06em', fontWeight: 500 }}>
-          Together Building a Prosperous, Inclusive North West
+        <div>
+          <div
+            style={{
+              fontSize: 13,
+              fontWeight: 500,
+              letterSpacing: '0.22em',
+              color: brand.colors.gold,
+              textTransform: 'uppercase',
+            }}
+          >
+            The decision
+          </div>
+          <h1
+            style={{
+              marginTop: 14,
+              fontSize: 64,
+              fontWeight: 600,
+              color: brand.colors.gold,
+              letterSpacing: '-0.01em',
+              lineHeight: 1.06,
+              maxWidth: 1400,
+            }}
+          >
+            Three approvals, one signature, Atlas starts Monday
+          </h1>
+        </div>
+
+        <div style={{ height: 1, background: brand.colors.gold, width: 220, opacity: 0.9 }} />
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 18, maxWidth: 1400 }}>
+          {approvals.map((a) => (
+            <div key={a.n} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: 24, alignItems: 'start' }}>
+              <div
+                style={{
+                  width: 64,
+                  height: 64,
+                  borderRadius: 4,
+                  background: brand.colors.gold,
+                  color: brand.colors.darkGreen,
+                  fontSize: 24,
+                  fontWeight: 600,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                {a.n}
+              </div>
+              <div>
+                <div style={{ fontSize: 22, fontWeight: 600, color: brand.colors.lightBg, letterSpacing: '-0.005em' }}>
+                  {a.title}
+                </div>
+                <div style={{ marginTop: 4, fontSize: 16, color: brand.colors.sand, lineHeight: 1.5 }}>
+                  {a.detail}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div
           style={{
-            marginTop: 18,
-            fontSize: 18,
-            color: brand.colors.mutedGreen,
-            letterSpacing: '0.08em',
-          }}
-        >
-          20 to 22 July 2026 | Rustenburg, Sun City | North West Province
-        </div>
-
-        <h1
-          style={{
-            marginTop: 48,
-            fontSize: 84,
-            fontWeight: 600,
-            color: brand.colors.gold,
-            letterSpacing: '-0.01em',
-            lineHeight: 1.05,
-            maxWidth: 1500,
-          }}
-        >
-          The Mining Integration Summit &rsquo;26
-        </h1>
-
-        <div style={{ marginTop: 36, width: 240, height: 6, background: brand.colors.gold, borderRadius: 3 }} />
-
-        <div
-          style={{
-            marginTop: 40,
-            fontSize: 14,
-            color: brand.colors.darkBrown,
-            letterSpacing: '0.08em',
-            fontWeight: 500,
-          }}
-        >
-          Presented by SAMCA | Delivered by Atlas Consulting Group
-        </div>
-
-        <div
-          style={{
-            marginTop: 18,
+            marginTop: 12,
             fontSize: 14,
             color: brand.colors.sand,
             letterSpacing: '0.04em',
@@ -80,10 +115,10 @@ export default function Slide30CallToAction() {
           Ofentse Thulare | Atlas Consulting Group | ofentse@atlascg.co.za
         </div>
 
-        <div style={{ position: 'absolute', left: 80, bottom: 80, opacity: 0.6 }}>
+        <div style={{ position: 'absolute', left: 0, bottom: 0, opacity: 0.45 }}>
           <GoldCheckerboard cols={4} rows={5} cell={16} />
         </div>
-        <div style={{ position: 'absolute', right: 80, bottom: 80, opacity: 0.6, transform: 'rotate(180deg)' }}>
+        <div style={{ position: 'absolute', right: 0, bottom: 0, opacity: 0.45, transform: 'rotate(180deg)' }}>
           <GoldCheckerboard cols={4} rows={5} cell={16} />
         </div>
       </div>

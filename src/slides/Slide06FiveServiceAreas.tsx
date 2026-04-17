@@ -31,7 +31,7 @@ const areas: Array<{ n: string; title: string; body: string }> = [
 
 export default function Slide06FiveServiceAreas() {
   return (
-    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={6} totalPages={31}>
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={6} totalPages={39}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 36 }}>
         <div>
           <div
@@ -54,7 +54,7 @@ export default function Slide06FiveServiceAreas() {
               letterSpacing: '-0.01em',
             }}
           >
-            Five outcomes we deliver
+            Five outcomes Atlas will deliver
           </h1>
         </div>
 

@@ -57,16 +57,16 @@ const adRows: Array<{ platform: string; amount: string }> = [
 
 export default function Slide26FullBudget() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={26} totalPages={31}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={26} totalPages={39}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 20 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
-            Part D1, Atlas retainer investment
+            Part D1, Atlas investment recommendation
           </div>
           <h1 style={{ fontSize: 52, fontWeight: 600, color: brand.colors.darkGreen, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
-            R
+            Atlas recommends R
             <NumberTicker value={415620} />
-            {', '}Tier 2 investment (10% discount applied)
+            {' '}to deliver this programme
           </h1>
         </div>
 

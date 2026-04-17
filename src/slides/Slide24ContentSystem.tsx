@@ -1,6 +1,5 @@
 import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
-import PlaceholderZone from '../components/PlaceholderZone'
 
 const outputs: string[] = [
   '8 to 12 vertical clips in 15 minutes, Opus Clip Pro auto-edit',
@@ -13,7 +12,7 @@ const outputs: string[] = [
 
 export default function Slide24ContentSystem() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={24} totalPages={31}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={24} totalPages={39}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 28 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
@@ -64,7 +63,28 @@ export default function Slide24ContentSystem() {
             </div>
           </div>
 
-          <PlaceholderZone label="Sample content pieces to be added" />
+          {/* [IMAGE: grid of six sample deliverables. Top row: LinkedIn carousel cover, vertical Reel thumbnail, YouTube chapter card. Bottom row: Beehiiv newsletter header, WhatsApp audiogram, TikTok poster. Flat vector, SAMCA brand palette. 1600x900.] */}
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              background: brand.colors.sand,
+              border: `1.5px dashed ${brand.colors.gold}`,
+              borderRadius: 8,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: brand.colors.amber,
+              fontSize: 13,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              fontWeight: 600,
+              textAlign: 'center',
+              padding: 24,
+            }}
+          >
+            Sample deliverables,<br />six finished pieces
+          </div>
         </div>
       </div>
     </SlideFrame>
