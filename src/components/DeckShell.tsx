@@ -120,6 +120,7 @@ export default function DeckShell() {
           style={{
             width: brand.grid.width,
             height: brand.grid.height,
+            flexShrink: 0,
             transform: `scale(${scale})`,
             transformOrigin: 'center center',
             position: 'relative',
