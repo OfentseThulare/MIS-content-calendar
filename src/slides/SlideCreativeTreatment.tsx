@@ -58,11 +58,11 @@ export default function SlideCreativeTreatment() {
           src="/page27-moodboard.svg"
           alt="MIS 2026 creative direction moodboard"
           style={{
-            maxWidth: '100%',
-            maxHeight: '100%',
-            width: 'auto',
+            width: 'calc(100% + 2px)',
             height: 'auto',
+            maxHeight: '100%',
             display: 'block',
+            transform: 'translateX(3px)',
           }}
         />
       </div>
