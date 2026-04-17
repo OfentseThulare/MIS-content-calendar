@@ -11,15 +11,15 @@ type Phase = {
 }
 
 const phases: Phase[] = [
-  { name: 'Build the case', weeks: 'W1 to 3, 27 Apr to 17 May', theme: 'Why this summit matters now', outcome: '500 warm list', budget: 'R95k, 10%' },
-  { name: 'Fill the room', weeks: 'W4 to 6, 18 May to 7 Jun', theme: 'Who is already in the room', outcome: '200 paid regs', budget: 'R285k, 30%' },
-  { name: 'Prove substance', weeks: 'W7 to 9, 8 Jun to 28 Jun', theme: 'What you get for three days', outcome: '400 paid regs', budget: 'R285k, 30%' },
-  { name: 'Final push', weeks: 'W10 to 12, 29 Jun to 19 Jul', theme: 'Do not miss the table', outcome: '550 paid, sold out', budget: 'R285k, 30%' },
+  { name: 'Build the case', weeks: 'W1 to 3, 27 Apr to 17 May', theme: 'Why this summit matters now', outcome: '500 warm list, 1 sponsor announced', budget: 'R95k, 10%' },
+  { name: 'Fill the room', weeks: 'W4 to 6, 18 May to 7 Jun', theme: 'Who is already in the room', outcome: 'Sponsors closed, 200 registrations', budget: 'R285k, 30%' },
+  { name: 'Prove substance', weeks: 'W7 to 9, 8 Jun to 28 Jun', theme: 'What you get for three days', outcome: 'Agenda live, 400 registrations', budget: 'R285k, 30%' },
+  { name: 'Final push', weeks: 'W10 to 12, 29 Jun to 19 Jul', theme: 'Do not miss the table', outcome: '550 registered, waitlist active', budget: 'R285k, 30%' },
 ]
 
 const curveData = [
   { week: 'W0', delegates: 0 },
-  { week: 'W3', delegates: 0 },
+  { week: 'W3', delegates: 50 },
   { week: 'W6', delegates: 200 },
   { week: 'W9', delegates: 400 },
   { week: 'W12', delegates: 550 },
@@ -27,14 +27,14 @@ const curveData = [
 
 export default function Slide18CampaignArc() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={18} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={18} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
             Part B4, campaign arc
           </div>
           <h1 style={{ fontSize: 52, fontWeight: 600, color: brand.colors.darkGreen, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
-            12 weeks, four phases, one trajectory
+            12 weeks, four phases. Sponsors close by Week 6, delegates fill by Week 12.
           </h1>
         </div>
 
@@ -94,7 +94,7 @@ export default function Slide18CampaignArc() {
             data={curveData}
             xKey="week"
             height={220}
-            lines={[{ dataKey: 'delegates', colour: brand.colors.gold, label: 'Paid delegates' }]}
+            lines={[{ dataKey: 'delegates', colour: brand.colors.gold, label: 'Registered delegates' }]}
           />
         </div>
 

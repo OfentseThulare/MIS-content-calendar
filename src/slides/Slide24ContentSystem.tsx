@@ -3,16 +3,17 @@ import SlideFrame from '../components/SlideFrame'
 import PlaceholderZone from '../components/PlaceholderZone'
 
 const outputs: string[] = [
-  'Three polished video clips, Opus Clip plus Descript',
-  'One LinkedIn carousel, Canva template',
-  'One newsletter summary, Beehiiv',
-  'One WhatsApp audiogram, Headliner',
-  'One full YouTube episode with chapters',
+  '8 to 12 vertical clips in 15 minutes, Opus Clip Pro auto-edit',
+  'Top 3 clips refined with brand lower thirds in 20 minutes each, Descript',
+  'LinkedIn carousel generated from transcript in 25 minutes, Canva master template',
+  'Beehiiv newsletter summary written in 20 minutes',
+  'WhatsApp audiogram produced in 10 minutes, Headliner',
+  'Full YouTube episode with chapters exported in 45 minutes',
 ]
 
 export default function Slide24ContentSystem() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={24} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={24} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 28 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
@@ -46,7 +47,7 @@ export default function Slide24ContentSystem() {
               One Fireside, five pieces, under four hours
             </div>
             <div style={{ marginTop: 18, color: brand.colors.darkGreen, fontSize: 18, fontWeight: 500 }}>
-              One Fireside Conversation, 45 minutes, produces:
+              One 45-minute Fireside Conversation, recorded on Riverside, produces:
             </div>
             <ul style={{ marginTop: 14, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
               {outputs.map((o) => (
@@ -56,10 +57,10 @@ export default function Slide24ContentSystem() {
               ))}
             </ul>
             <div style={{ marginTop: 18, color: brand.colors.amber, fontSize: 15, fontWeight: 600 }}>
-              Total production time, under four hours.
+              Five finished pieces. Under four hours. Canva master files with SAMCA brand tokens, any team member can produce on-brand collateral in 30 seconds.
             </div>
             <div style={{ marginTop: 20, color: brand.colors.mutedGreen, fontSize: 12, letterSpacing: '0.16em' }}>
-              Source: Part E1, MIS 2026 Master Strategy
+              Source: Master Strategy Part E1
             </div>
           </div>
 

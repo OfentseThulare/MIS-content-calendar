@@ -4,7 +4,7 @@ import SegmentCard from '../components/SegmentCard'
 
 export default function Slide09SegmentExecs() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={9} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={9} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
@@ -18,10 +18,10 @@ export default function Slide09SegmentExecs() {
         <div style={{ maxWidth: 1400 }}>
           <SegmentCard
             title="Who, hook, and channels"
-            badge="250 delegates at R8,500 average ticket"
+            badge="250 executive and ESG delegates, by invitation"
             who="CEOs, COOs, Heads of Sustainability at mid and large cap mining houses"
-            hook="The one table where mining, communities and schools sign the same page."
-            channels="LinkedIn Sales Navigator, executive WhatsApp, curated email, invite-only Fireside"
+            hook="The one room where mining houses, communities, and schools are publicly accountable to each other."
+            channels="LinkedIn Sales Navigator, LinkedIn Conversation Ads, personalised email, executive WhatsApp concierge desk, invite-only Fireside Conversation series"
             proof="Logos of first three confirmed sponsors, named SAMCA board members, named government speaker"
           />
         </div>

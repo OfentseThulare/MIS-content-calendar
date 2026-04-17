@@ -5,12 +5,12 @@ const rows: Array<[string, string]> = [
   ['Register for a conference', 'Join an accountability table'],
   ['Attend sessions', 'Make a public commitment'],
   ['Sponsor logo on banner', 'Sponsor chairs a pillar'],
-  ['Community pass', 'Community delegation voice'],
+  ['Community delegate', 'Community delegation voice, on the public record'],
 ]
 
 export default function Slide07MovementFrame() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={7} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={7} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
         <div>
           <div

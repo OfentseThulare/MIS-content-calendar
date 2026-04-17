@@ -3,13 +3,13 @@ import SlideFrame from '../components/SlideFrame'
 
 type Level = 'Primary' | 'Secondary' | 'Support' | 'Ignore'
 
-const platforms = ['LinkedIn', 'Google', 'YouTube', 'Meta', 'TikTok', 'WhatsApp', 'Email'] as const
+const platforms = ['LinkedIn', 'Google', 'YouTube', 'Meta', 'TikTok', 'WhatsApp', 'Email', 'Twitter/X'] as const
 const segments: Array<{ name: string; values: Level[] }> = [
-  { name: 'Execs', values: ['Primary', 'Secondary', 'Primary', 'Support', 'Ignore', 'Primary', 'Primary'] },
-  { name: 'Sponsors', values: ['Primary', 'Support', 'Secondary', 'Support', 'Ignore', 'Primary', 'Primary'] },
-  { name: 'Government', values: ['Primary', 'Support', 'Secondary', 'Secondary', 'Ignore', 'Secondary', 'Primary'] },
-  { name: 'Communities', values: ['Ignore', 'Support', 'Secondary', 'Primary', 'Primary', 'Primary', 'Secondary'] },
-  { name: 'Schools', values: ['Secondary', 'Primary', 'Primary', 'Primary', 'Primary', 'Primary', 'Primary'] },
+  { name: 'Execs', values: ['Primary', 'Support', 'Secondary', 'Ignore', 'Ignore', 'Primary', 'Primary', 'Secondary'] },
+  { name: 'Sponsors', values: ['Primary', 'Support', 'Secondary', 'Ignore', 'Ignore', 'Primary', 'Primary', 'Secondary'] },
+  { name: 'Government', values: ['Primary', 'Support', 'Secondary', 'Ignore', 'Ignore', 'Secondary', 'Primary', 'Primary'] },
+  { name: 'Communities', values: ['Ignore', 'Support', 'Secondary', 'Primary', 'Secondary', 'Primary', 'Secondary', 'Ignore'] },
+  { name: 'Schools', values: ['Secondary', 'Secondary', 'Primary', 'Primary', 'Primary', 'Primary', 'Secondary', 'Ignore'] },
 ]
 
 function cellColour(level: Level): { bg: string; fg: string } {
@@ -28,7 +28,7 @@ function cellColour(level: Level): { bg: string; fg: string } {
 
 export default function Slide15PlatformMap() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={15} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={15} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 28 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>

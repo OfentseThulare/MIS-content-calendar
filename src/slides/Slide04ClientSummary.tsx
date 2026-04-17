@@ -8,13 +8,13 @@ const rows: Array<[string, string]> = [
   ['Venue', 'Sun City, Rustenburg, North West Province'],
   ['Dates', '20 to 22 July 2026'],
   ['Programme', 'Day Programme, Gala Dinner, Mayoral Golf Day'],
-  ['Presented by', 'SAMCA, delivered by Atlas Consulting Group, subcontracted under BeInnovation'],
+  ['Presented by', 'SAMCA, South African Mining Communities Association'],
   ['CEO', 'Jade Adams'],
 ]
 
 export default function Slide04ClientSummary() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={4} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={4} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 36 }}>
         <div>
           <div

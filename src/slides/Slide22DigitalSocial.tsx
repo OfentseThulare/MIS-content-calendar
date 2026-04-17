@@ -2,17 +2,17 @@ import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
 import PlaceholderZone from '../components/PlaceholderZone'
 
-const calendar: Array<{ day: string; post: string; boost: string }> = [
-  { day: 'Monday', post: 'Fireside clip 60 seconds on SAMCA page', boost: 'R3k boost' },
-  { day: 'Tuesday', post: 'Pillar thought leadership on Lee personal', boost: 'R4k boost' },
-  { day: 'Wednesday', post: 'Sponsor or speaker announcement', boost: 'R5k boost' },
-  { day: 'Thursday', post: 'Delegate spotlight', boost: 'Organic' },
-  { day: 'Friday', post: 'Week recap with registration CTA', boost: 'R3k boost' },
+const calendar: Array<{ day: string; post: string; type: string }> = [
+  { day: 'Monday', post: 'Fireside recap clip (60 sec vertical), LinkedIn and YouTube Shorts', type: 'Organic' },
+  { day: 'Tuesday', post: 'Pillar thought leadership post, Lee or SAMCA board member personal page', type: 'Organic' },
+  { day: 'Wednesday', post: 'Sponsor or speaker announcement carousel', type: 'Organic plus Paid boost' },
+  { day: 'Thursday', post: 'Fireside Conversation live session (7pm to 9pm)', type: 'Organic' },
+  { day: 'Friday', post: 'Week recap with registration CTA, LinkedIn sponsored', type: 'Paid' },
 ]
 
 export default function Slide22DigitalSocial() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={22} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={22} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 28 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
@@ -50,12 +50,12 @@ export default function Slide22DigitalSocial() {
                 <div key={c.day} style={{ display: 'grid', gridTemplateColumns: '120px 1fr 140px', alignItems: 'baseline' }}>
                   <div style={{ color: brand.colors.darkGreen, fontSize: 15, fontWeight: 600 }}>{c.day}</div>
                   <div style={{ color: brand.colors.bodyText, fontSize: 15 }}>{c.post}</div>
-                  <div style={{ color: brand.colors.amber, fontSize: 13, fontWeight: 600, textAlign: 'right' }}>{c.boost}</div>
+                  <div style={{ color: brand.colors.amber, fontSize: 13, fontWeight: 600, textAlign: 'right' }}>{c.type}</div>
                 </div>
               ))}
             </div>
             <div style={{ marginTop: 24, color: brand.colors.mutedGreen, fontSize: 12, letterSpacing: '0.16em' }}>
-              Source: Part C1, MIS 2026 Master Strategy
+              Source: Master Strategy Part C1 and Part B4
             </div>
           </div>
 

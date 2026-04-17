@@ -4,7 +4,7 @@ import SegmentCard from '../components/SegmentCard'
 
 export default function Slide12SegmentCommunities() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={12} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={12} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
@@ -18,10 +18,10 @@ export default function Slide12SegmentCommunities() {
         <div style={{ maxWidth: 1400 }}>
           <SegmentCard
             title="Who, hook, and channels"
-            badge="150 delegates, subsidised at R250"
+            badge="150 community delegates, complimentary passes, transport and accommodation supported"
             who="Community leaders, tribal authorities, youth organisations, women in mining groups"
             hook="Three requests. Sixty days to answer. On the record."
-            channels="Community radio, WhatsApp broadcast lists, church networks, in-person roadshows"
+            channels="WhatsApp broadcast lists via SAMCA existing community networks, Facebook (Rustenburg, Carletonville, Welkom, Kimberley geotargeting), community radio (Kgatleng FM, Mafisa Community Radio, Motheo FM)"
             proof="Signed memoranda from three host community councils"
           />
         </div>

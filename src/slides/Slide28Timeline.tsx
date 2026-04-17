@@ -3,7 +3,7 @@ import SlideFrame from '../components/SlideFrame'
 
 const phases: Array<{ period: string; phase: string; milestone: string }> = [
   { period: 'Now to 30 Apr', phase: 'Foundation and go-live', milestone: 'Outreach live, prospectus in production' },
-  { period: '1 to 15 May', phase: 'Noise generation', milestone: 'Paid campaigns live, endorsements rolling' },
+  { period: '1 to 31 May', phase: 'Sponsor close sprint', milestone: 'All six sponsor commitments confirmed by 31 May' },
   { period: '16 May to 30 Jun', phase: 'Conversion window', milestone: 'Registrations open, 400 delegates' },
   { period: '1 to 19 Jul', phase: 'Final push', milestone: 'Sold out messaging, logistics confirmed' },
   { period: '20 to 22 Jul', phase: 'Event live', milestone: 'Three days, three programmes' },
@@ -12,7 +12,7 @@ const phases: Array<{ period: string; phase: string; milestone: string }> = [
 
 export default function Slide28Timeline() {
   return (
-    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={28} totalPages={30}>
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={28} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.gold, textTransform: 'uppercase' }}>
@@ -44,6 +44,10 @@ export default function Slide28Timeline() {
 
         <div style={{ maxWidth: 1400, color: brand.colors.sand, fontSize: 17, lineHeight: 1.6 }}>
           When the three days close, the year begins. Twelve months of pillar chairs, community responses, and funded student projects, all on the record.
+        </div>
+
+        <div style={{ maxWidth: 1500, color: brand.colors.gold, fontSize: 14, lineHeight: 1.5, fontStyle: 'italic' }}>
+          From 1 June: no new sponsorship conversations. Atlas and SAMCA shift entirely to delegate acquisition, speaker announcements, and programme reveals.
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.sand, fontSize: 12, letterSpacing: '0.16em' }}>

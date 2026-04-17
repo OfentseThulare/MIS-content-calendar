@@ -4,34 +4,34 @@ import SlideFrame from '../components/SlideFrame'
 const areas: Array<{ n: string; title: string; body: string }> = [
   {
     n: '01',
-    title: 'Sponsor and Delegate Acquisition',
-    body: 'Named outreach to mining houses, OEMs, government, and municipalities. Tiered prospectus and tracked pipeline.',
+    title: 'A pipeline that fills the room',
+    body: 'Automated direct outreach across LinkedIn and email delivers 1,000 targeted touchpoints per day, segmented by sponsor type and delegate profile. Every positive response is escalated to SAMCA within 24 hours. No manual effort required.',
   },
   {
     n: '02',
-    title: 'Event Technology and Data Infrastructure',
-    body: 'Registration stack, delegate CRM, live polling, dashboards for Jade and board, post-event impact report.',
+    title: 'A brand presence that builds belief',
+    body: 'Organic social across LinkedIn, Facebook, Instagram, TikTok, YouTube, and WhatsApp. Paid campaigns across LinkedIn, Meta, Google, and TikTok. Speaker announcements, government endorsements, and sponsor reveals on a structured weekly calendar.',
   },
   {
     n: '03',
-    title: 'Content, Narrative and Social Media',
-    body: 'Fireside Conversation series, weekly newsletter, LinkedIn and Meta calendar, community radio, WhatsApp broadcasts.',
+    title: 'An infrastructure that owns the data',
+    body: 'CRM, n8n automation hub, WhatsApp sequences, and email workflows connected from Day 1. Every contact, every registration, every sponsor conversation tracked. SAMCA owns all credentials and data from first milestone.',
   },
   {
     n: '04',
-    title: 'Design and Collateral',
-    body: 'Full brand system, on-site signage, prospectus, gala programme, sponsor wall, delegate collateral, press kit.',
+    title: 'Collateral that closes sponsors',
+    body: 'Investment-grade sponsorship prospectus, six personalised sponsor one-pagers, full digital brand identity system, social and email templates, and a post-event impact report delivered within 14 days of close.',
   },
   {
     n: '05',
-    title: 'B2B Matchmaking Platform Roadmap',
-    body: 'Phase one matchmaking at the summit. Phase two roadmap for a year-round pillar platform tied to SLP delivery.',
+    title: 'Content that travels beyond the room',
+    body: 'One Fireside Conversation produces five finished pieces in under four hours. On-site production team captures all three days. Post-event repurposing campaign runs for 30 days after the summit closes.',
   },
 ]
 
 export default function Slide06FiveServiceAreas() {
   return (
-    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={6} totalPages={30}>
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={6} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 36 }}>
         <div>
           <div
@@ -43,7 +43,7 @@ export default function Slide06FiveServiceAreas() {
               textTransform: 'uppercase',
             }}
           >
-            Beat 3, What Could Be
+            What Atlas delivers
           </div>
           <h1
             style={{
@@ -54,7 +54,7 @@ export default function Slide06FiveServiceAreas() {
               letterSpacing: '-0.01em',
             }}
           >
-            Five areas of delivery
+            Five outcomes we deliver
           </h1>
         </div>
 

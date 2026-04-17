@@ -3,7 +3,7 @@ import SlideFrame from '../components/SlideFrame'
 
 export default function Slide05Background() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={5} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={5} totalPages={31}>
       <div
         style={{
           width: '100%',

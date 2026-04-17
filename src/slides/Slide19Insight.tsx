@@ -3,7 +3,7 @@ import SlideFrame from '../components/SlideFrame'
 
 export default function Slide19Insight() {
   return (
-    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={19} totalPages={30}>
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={19} totalPages={31}>
       <div
         style={{
           width: '100%',

@@ -4,7 +4,7 @@ import SegmentCard from '../components/SegmentCard'
 
 export default function Slide11SegmentGovernment() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={11} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={11} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
@@ -19,10 +19,10 @@ export default function Slide11SegmentGovernment() {
           <SegmentCard
             title="Who, hook, and channels"
             badge="50 complimentary seats, 8 speaking slots"
-            who="DMRE, DBE, DTIC, provincial government, Minerals Council"
+            who="Premier of North West Province, MECs for Economic Development and Education, DMRE, Bojanala Platinum District Municipality, local municipal officials (Rustenburg, Moses Kotane, Madibeng)"
             hook="The platform where policy meets the people it serves."
             channels="Named outreach through SAMCA government liaison, curated email briefs, DG level invitations"
-            proof="Endorsement letters from two MECs"
+            proof="[TBC, confirm with SAMCA: which government endorsements are confirmed?]"
           />
         </div>
 

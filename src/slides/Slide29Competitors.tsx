@@ -6,10 +6,10 @@ type Row = { event: string; delegates: string; ticket: string; model: string; ad
 const rows: Row[] = [
   {
     event: 'Joburg Indaba',
-    delegates: '850',
-    ticket: 'R30,000',
+    delegates: '400 to 500',
+    ticket: 'Invitation only, no public pricing',
     model: 'Invitation only',
-    advantage: 'MIS is accessible, R250 community pass',
+    advantage: 'MIS is accessible and free to attend, no price barrier to any segment',
   },
   {
     event: 'Mining Indaba, community forum',
@@ -29,7 +29,7 @@ const rows: Row[] = [
 
 export default function Slide29Competitors() {
   return (
-    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={29} totalPages={30}>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={29} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
@@ -91,7 +91,7 @@ export default function Slide29Competitors() {
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.mutedGreen, fontSize: 12, letterSpacing: '0.16em' }}>
-          Source: Part B1, MIS 2026 Master Strategy
+          Source: Intelligence Dossier Module 7 | MIS2026 Competitive Analysis
         </div>
       </div>
     </SlideFrame>

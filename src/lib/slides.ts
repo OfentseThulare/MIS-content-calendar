@@ -25,6 +25,7 @@ import Slide23EmailWhatsApp from '../slides/Slide23EmailWhatsApp'
 import Slide24ContentSystem from '../slides/Slide24ContentSystem'
 import Slide25Funnel from '../slides/Slide25Funnel'
 import Slide26FullBudget from '../slides/Slide26FullBudget'
+import Slide26bROI from '../slides/Slide26b_ROI'
 import Slide27WeeklyReport from '../slides/Slide27WeeklyReport'
 import Slide28Timeline from '../slides/Slide28Timeline'
 import Slide29Competitors from '../slides/Slide29Competitors'
@@ -74,6 +75,7 @@ export const slides: Slide[] = [
   { id: 'slide-24', component: Slide24ContentSystem, sparklineBeat: 8, section: 'Expression' },
   { id: 'slide-25', component: Slide25Funnel, section: 'Substance' },
   { id: 'slide-26', component: Slide26FullBudget, section: 'Substance' },
+  { id: 'slide-26b', component: Slide26bROI, section: 'Substance' },
   { id: 'slide-27', component: Slide27WeeklyReport, section: 'Substance' },
   { id: 'slide-28', component: Slide28Timeline, sparklineBeat: 9, section: 'Close' },
   { id: 'slide-29', component: Slide29Competitors, section: 'Close' },

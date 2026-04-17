@@ -4,38 +4,37 @@ import NumberTicker from '../components/NumberTicker'
 
 type Step = { label: string; value: number; suffix?: string }
 const steps: Step[] = [
-  { label: 'Paid media', value: 500000, suffix: '' },
-  { label: 'Impressions', value: 5180000 },
-  { label: 'Video views', value: 980000 },
-  { label: 'Landing sessions', value: 58000 },
-  { label: 'Email captures', value: 4200 },
-  { label: 'Registration submissions', value: 770 },
-  { label: 'Paid delegates', value: 550 },
+  { label: 'Total ad spend', value: 500000, suffix: '' },
+  { label: 'Total impressions', value: 1270000 },
+  { label: 'Video views (3 sec+)', value: 680000 },
+  { label: 'Landing page sessions', value: 42000 },
+  { label: 'Email and WhatsApp captures', value: 5800 },
+  { label: 'Registration submissions', value: 820 },
+  { label: 'Confirmed registered delegates', value: 550 },
 ]
 
 type SourceRow = { source: string; delegates: number; cac: string }
 const sources: SourceRow[] = [
-  { source: 'LinkedIn', delegates: 112, cac: 'R2,009' },
-  { source: 'Meta', delegates: 135, cac: 'R704' },
-  { source: 'Google plus YouTube', delegates: 90, cac: 'R1,333' },
-  { source: 'WhatsApp', delegates: 78, cac: 'R282' },
+  { source: 'LinkedIn (paid plus organic)', delegates: 130, cac: 'R1,731' },
+  { source: 'Meta, Facebook plus Instagram', delegates: 135, cac: 'R704' },
+  { source: 'Google plus YouTube', delegates: 93, cac: 'R1,290' },
+  { source: 'WhatsApp broadcasts', delegates: 80, cac: 'R275' },
   { source: 'TikTok', delegates: 55, cac: 'R400' },
-  { source: 'Email plus direct', delegates: 55, cac: 'R0' },
-  { source: 'PR plus earned', delegates: 25, cac: 'R3,000' },
+  { source: 'Email plus direct outreach', delegates: 57, cac: 'R0 (included in retainer)' },
 ]
 
 const max = Math.max(...steps.map((s) => s.value))
 
 export default function Slide25Funnel() {
   return (
-    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={25} totalPages={30}>
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg} showChrome pageNumber={25} totalPages={31}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.gold, textTransform: 'uppercase' }}>
             Part D2, delegate funnel
           </div>
           <h1 style={{ fontSize: 60, fontWeight: 600, color: brand.colors.gold, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
-            R500k to 550 delegates
+            R500k in ad spend. 550 confirmed registered delegates.
           </h1>
         </div>
 
@@ -99,12 +98,12 @@ export default function Slide25Funnel() {
           </div>
         </div>
 
-        <div style={{ color: brand.colors.gold, fontSize: 20, fontWeight: 600 }}>
-          Blended CAC, R1,091. LTV:CAC ratio 17:1.
+        <div style={{ color: brand.colors.gold, fontSize: 18, fontWeight: 600, maxWidth: 1700, lineHeight: 1.4 }}>
+          Blended delegate acquisition cost: R909 per registered delegate. Joburg Indaba 2024 benchmark: R2,000 per delegate. MIS 2026 is 55% more efficient.
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.sand, fontSize: 12, letterSpacing: '0.16em' }}>
-          Source: Part D2, MIS 2026 Master Strategy
+          Source: Master Strategy Part D2 | Joburg Indaba 2024 benchmark (Master Strategy Page 52)
         </div>
       </div>
     </SlideFrame>
