@@ -1,6 +1,7 @@
 import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
 import GoldCheckerboard from '../components/GoldCheckerboard'
+import ImmersiveVideoWell from '../components/ImmersiveVideoWell'
 
 export default function Slide01Title() {
   return (
@@ -14,9 +15,25 @@ export default function Slide01Title() {
           pointerEvents: 'none',
         }}
       />
+
+      <div
+        style={{
+          position: 'absolute',
+          left: '48%',
+          right: 0,
+          top: 0,
+          bottom: 0,
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      >
+        <ImmersiveVideoWell />
+      </div>
+
       <div
         style={{
           position: 'relative',
+          zIndex: 1,
           width: '100%',
           height: '100%',
           display: 'flex',

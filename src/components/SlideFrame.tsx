@@ -80,7 +80,8 @@ export default function SlideFrame({
             flex: 1,
             minHeight: 0,
             width: '100%',
-            alignSelf: 'center',
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
           {children}

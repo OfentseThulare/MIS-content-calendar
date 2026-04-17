@@ -118,7 +118,7 @@ export default function Slide26FullBudget() {
               border: `1px solid ${brand.colors.sand}`,
             }}
           >
-            <BudgetChart data={slices} height={300} />
+            <BudgetChart data={slices} height={300} innerRadius={55} outerRadius={95} />
           </div>
         </div>
 

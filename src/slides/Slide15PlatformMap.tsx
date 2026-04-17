@@ -47,7 +47,7 @@ export default function Slide15PlatformMap() {
             maxWidth: '100%',
           }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: `160px repeat(${platforms.length}, 1fr)`, background: brand.colors.gold }}>
+          <div style={{ display: 'grid', gridTemplateColumns: `160px repeat(${platforms.length}, minmax(0, 1fr))`, background: brand.colors.gold }}>
             <div style={{ padding: '14px 18px', color: brand.colors.darkGreen, fontWeight: 600, fontSize: 14, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Segment
             </div>
@@ -62,7 +62,7 @@ export default function Slide15PlatformMap() {
               key={seg.name}
               style={{
                 display: 'grid',
-                gridTemplateColumns: `160px repeat(${platforms.length}, 1fr)`,
+                gridTemplateColumns: `160px repeat(${platforms.length}, minmax(0, 1fr))`,
                 background: i % 2 === 0 ? brand.colors.lightBg : brand.colors.sand,
                 borderTop: `1px solid ${brand.colors.sand}`,
               }}
