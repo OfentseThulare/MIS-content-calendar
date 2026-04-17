@@ -10,20 +10,21 @@ type SectionDividerProps = {
 
 export default function SectionDivider({
   title,
-  accentColor = brand.colors.miningGold,
-  bg = brand.colors.shaftBlack,
-  textColor = brand.colors.kalahariCream,
+  accentColor = brand.colors.gold,
+  bg = brand.colors.darkGreen,
+  textColor = brand.colors.gold,
 }: SectionDividerProps) {
   return (
-    <SlideFrame bg={bg}>
+    <SlideFrame bg={bg} textColor={textColor}>
       <div className="h-full w-full flex flex-col justify-center">
         <div
           style={{
             fontSize: 96,
-            fontWeight: 500,
+            fontWeight: 600,
             color: textColor,
-            letterSpacing: '-0.02em',
+            letterSpacing: '-0.01em',
             lineHeight: 1.05,
+            fontFamily: brand.fonts.primary,
           }}
         >
           {title}
@@ -32,7 +33,7 @@ export default function SectionDivider({
           style={{
             marginTop: 48,
             width: 120,
-            height: 1,
+            height: 2,
             background: accentColor,
           }}
         />

@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-mining-gold: #B88430;
-  --color-forest-green: #1F4A2A;
-  --color-shaft-black: #1A1A1A;
-  --color-kalahari-cream: #F4ECD8;
-  --color-ochre-red: #8B2B1F;
-  --color-editorial-grey: #6B6B6B;
-  --color-cloud-white: #F5F2ED;
+  --color-dark-green: #264527;
+  --color-gold: #E2BB39;
+  --color-dark-brown: #854507;
+  --color-amber: #BD770B;
+  --color-muted-green: #5C846C;
+  --color-sage: #788D54;
+  --color-sand: #D9D09F;
+  --color-light-bg: #F8F5EC;
+  --color-body-text: #2D2D2D;
+  --color-mis-white: #FFFFFF;
 }
 
 :root {
@@ -19,8 +22,8 @@ html, body, #root {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: #1A1A1A;
-  color: #F4ECD8;
+  background: #264527;
+  color: #F8F5EC;
   font-family: "Geist", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,8 +40,8 @@ html, body, #root {
   100% { background-position: 0% 50%; }
 }
 
-.shimmer-future {
-  background: linear-gradient(90deg, #B88430, #1F4A2A, #B88430);
+.shimmer-together {
+  background: linear-gradient(90deg, #E2BB39, #BD770B, #E2BB39);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;

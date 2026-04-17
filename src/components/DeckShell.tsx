@@ -13,9 +13,9 @@ export default function DeckShell() {
   const total = slides.length
 
   const goTo = useCallback(
-    (next: number) => {
-      setDirection(next > index ? 1 : -1)
-      setIndex(Math.max(0, Math.min(total - 1, next)))
+    (nextIndex: number) => {
+      setDirection(nextIndex > index ? 1 : -1)
+      setIndex(Math.max(0, Math.min(total - 1, nextIndex)))
     },
     [index, total],
   )
@@ -80,7 +80,7 @@ export default function DeckShell() {
       style={{
         position: 'fixed',
         inset: 0,
-        background: brand.colors.shaftBlack,
+        background: brand.colors.darkGreen,
         overflow: 'hidden',
         fontFamily: brand.fonts.primary,
       }}
@@ -92,7 +92,7 @@ export default function DeckShell() {
           left: 0,
           right: 0,
           height: 3,
-          background: 'rgba(244, 236, 216, 0.08)',
+          background: 'rgba(15, 30, 18, 0.65)',
           zIndex: 20,
         }}
       >
@@ -100,7 +100,7 @@ export default function DeckShell() {
           style={{
             width: `${progress}%`,
             height: '100%',
-            background: brand.colors.miningGold,
+            background: brand.colors.gold,
             transition: 'width 400ms cubic-bezier(0.22, 1, 0.36, 1)',
           }}
         />
@@ -150,7 +150,7 @@ export default function DeckShell() {
           position: 'absolute',
           bottom: 20,
           right: 32,
-          color: brand.colors.editorialGrey,
+          color: brand.colors.mutedGreen,
           fontSize: 12,
           letterSpacing: '0.18em',
           fontVariantNumeric: 'tabular-nums',

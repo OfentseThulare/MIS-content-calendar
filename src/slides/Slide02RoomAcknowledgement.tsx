@@ -1,43 +1,40 @@
-import SlideFrame from '../components/SlideFrame'
 import { brand } from '../lib/brand'
+import SlideFrame from '../components/SlideFrame'
 
 export default function Slide02RoomAcknowledgement() {
   return (
-    <SlideFrame>
+    <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={2} totalPages={30}>
       <div
         style={{
+          width: '100%',
           height: '100%',
           display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          maxWidth: 1300,
+          alignItems: 'center',
         }}
       >
-        <div
-          style={{
-            fontSize: 14,
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            color: brand.colors.miningGold,
-            marginBottom: 48,
-          }}
-        >
-          A note before we begin
+        <div style={{ position: 'relative', paddingLeft: 40, maxWidth: 1200 }}>
+          <div
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 8,
+              bottom: 8,
+              width: 4,
+              background: brand.colors.gold,
+            }}
+          />
+          <p
+            style={{
+              fontSize: 24,
+              lineHeight: 1.55,
+              color: brand.colors.bodyText,
+              fontWeight: 400,
+              margin: 0,
+            }}
+          >
+            This strategy was built from the ground up after a direct conversation with Jade Adams, CEO of SAMCA, on 15 April 2026. Every concern raised in that meeting has been answered in this document.
+          </p>
         </div>
-        <p
-          style={{
-            fontSize: 24,
-            fontWeight: 400,
-            lineHeight: 1.5,
-            color: brand.colors.kalahariCream,
-            textAlign: 'left',
-            margin: 0,
-          }}
-        >
-          This strategy was built from the ground up, informed by three decades of
-          mining sector intelligence, regulatory reality, and the voices of those
-          who build, govern, and invest in Southern Africa's extractive future.
-        </p>
       </div>
     </SlideFrame>
   )

@@ -36,38 +36,38 @@ export default function TrajectoryChart({
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data} margin={{ top: 24, right: 48, bottom: 24, left: 24 }}>
           <CartesianGrid
-            stroke={brand.colors.miningGold}
-            strokeOpacity={0.1}
+            stroke={brand.colors.gold}
+            strokeOpacity={0.12}
             vertical={false}
           />
           <XAxis
             dataKey={xKey}
-            stroke={brand.colors.editorialGrey}
-            tick={{ fill: brand.colors.kalahariCream, fontSize: 14, fontFamily: brand.fonts.primary }}
+            stroke={brand.colors.mutedGreen}
+            tick={{ fill: brand.colors.sand, fontSize: 14, fontFamily: brand.fonts.primary }}
             tickLine={false}
-            axisLine={{ stroke: brand.colors.editorialGrey, strokeOpacity: 0.4 }}
+            axisLine={{ stroke: brand.colors.mutedGreen, strokeOpacity: 0.4 }}
           />
           <YAxis
-            stroke={brand.colors.editorialGrey}
-            tick={{ fill: brand.colors.kalahariCream, fontSize: 14, fontFamily: brand.fonts.primary }}
+            stroke={brand.colors.mutedGreen}
+            tick={{ fill: brand.colors.sand, fontSize: 14, fontFamily: brand.fonts.primary }}
             tickLine={false}
             axisLine={false}
             domain={yDomain}
           />
           <Tooltip
             contentStyle={{
-              background: brand.colors.shaftBlack,
-              border: `1px solid ${brand.colors.miningGold}`,
+              background: brand.colors.darkGreen,
+              border: `1px solid ${brand.colors.gold}`,
               borderRadius: 6,
               fontFamily: brand.fonts.primary,
-              color: brand.colors.kalahariCream,
+              color: brand.colors.lightBg,
             }}
-            labelStyle={{ color: brand.colors.miningGold }}
+            labelStyle={{ color: brand.colors.gold }}
           />
           <Legend
             wrapperStyle={{
               fontFamily: brand.fonts.primary,
-              color: brand.colors.kalahariCream,
+              color: brand.colors.lightBg,
               fontSize: 14,
             }}
           />

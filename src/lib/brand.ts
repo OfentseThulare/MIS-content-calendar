@@ -1,12 +1,15 @@
 export const brand = {
   colors: {
-    miningGold: "#B88430",
-    forestGreen: "#1F4A2A",
-    shaftBlack: "#1A1A1A",
-    kalahariCream: "#F4ECD8",
-    ochreRed: "#8B2B1F",
-    editorialGrey: "#6B6B6B",
-    cloudWhite: "#F5F2ED",
+    darkGreen: "#264527",
+    gold: "#E2BB39",
+    darkBrown: "#854507",
+    amber: "#BD770B",
+    mutedGreen: "#5C846C",
+    sage: "#788D54",
+    sand: "#D9D09F",
+    lightBg: "#F8F5EC",
+    bodyText: "#2D2D2D",
+    white: "#FFFFFF",
   },
   fonts: {
     primary: "'Geist', system-ui, sans-serif",

@@ -1,85 +1,115 @@
-import SlideFrame from '../components/SlideFrame'
 import { brand } from '../lib/brand'
+import SlideFrame from '../components/SlideFrame'
+import GoldCheckerboard from '../components/GoldCheckerboard'
 
 export default function Slide01Title() {
   return (
-    <SlideFrame bg={brand.colors.shaftBlack}>
-      <svg
-        aria-hidden
+    <SlideFrame bg={brand.colors.darkGreen} textColor={brand.colors.lightBg}>
+      <div
         style={{
           position: 'absolute',
           inset: 0,
-          width: '100%',
-          height: '100%',
-          opacity: 0.05,
+          background:
+            'radial-gradient(ellipse at 30% 20%, rgba(226,187,57,0.12) 0%, rgba(38,69,39,0.0) 55%), linear-gradient(135deg, rgba(38,69,39,0.55) 0%, rgba(38,69,39,0.0) 70%)',
           pointerEvents: 'none',
         }}
-      >
-        <defs>
-          <pattern id="mis-grid" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
-            <path d="M 0 40 L 80 40" stroke={brand.colors.miningGold} strokeWidth="1" />
-            <path d="M 40 0 L 40 80" stroke={brand.colors.miningGold} strokeWidth="1" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#mis-grid)" />
-      </svg>
-
+      />
       <div
         style={{
           position: 'relative',
+          width: '100%',
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
+          justifyContent: 'space-between',
+          padding: 120,
         }}
       >
-        <div
-          style={{
-            fontSize: 72,
-            fontWeight: 500,
-            color: brand.colors.kalahariCream,
-            letterSpacing: '0.02em',
-            lineHeight: 1.1,
-            maxWidth: 1400,
-          }}
-        >
-          THE MINING INTEGRATION SUMMIT 2026
+        <div>
+          <div
+            style={{
+              fontSize: 28,
+              fontWeight: 600,
+              color: brand.colors.lightBg,
+              letterSpacing: '0.22em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Integrated Services
+          </div>
+          <div style={{ marginTop: 14, display: 'flex', alignItems: 'baseline', gap: 18 }}>
+            <div
+              style={{
+                fontSize: 42,
+                fontWeight: 600,
+                color: brand.colors.gold,
+                letterSpacing: '0.01em',
+              }}
+            >
+              Proposal
+            </div>
+            <div
+              style={{
+                fontSize: 54,
+                fontWeight: 600,
+                color: brand.colors.lightBg,
+                letterSpacing: '0.01em',
+              }}
+            >
+              2026
+            </div>
+          </div>
         </div>
+
         <div
           style={{
-            marginTop: 48,
-            width: '40%',
-            height: 1,
-            background: brand.colors.miningGold,
+            position: 'absolute',
+            left: 120,
+            right: 120,
+            top: '85%',
+            height: 1.5,
+            background: brand.colors.gold,
           }}
         />
-        <div
-          style={{
-            marginTop: 48,
-            fontSize: 24,
-            fontWeight: 400,
-            color: brand.colors.editorialGrey,
-            letterSpacing: '0.04em',
-          }}
-        >
-          Integrated Marketing Communications Strategy
-        </div>
-      </div>
 
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 80,
-          left: 80,
-          color: brand.colors.editorialGrey,
-          fontSize: 14,
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-        }}
-      >
-        September 2026, Johannesburg, South Africa
+        <div style={{ marginTop: 'auto' }}>
+          <div
+            style={{
+              fontSize: 9,
+              letterSpacing: '0.32em',
+              color: brand.colors.gold,
+              textTransform: 'uppercase',
+              fontWeight: 500,
+            }}
+          >
+            20 to 22 July 2026 | Day Programme | Gala Dinner | Mayoral Golf Day
+          </div>
+          <div
+            style={{
+              marginTop: 10,
+              fontSize: 9,
+              fontStyle: 'italic',
+              color: brand.colors.mutedGreen,
+              letterSpacing: '0.06em',
+            }}
+          >
+            Sustainable Harmony and Accountability for Transformation
+          </div>
+          <div
+            style={{
+              marginTop: 24,
+              fontSize: 14,
+              color: brand.colors.sand,
+              letterSpacing: '0.08em',
+            }}
+          >
+            Presented by SAMCA, South African Mining Communities Association
+          </div>
+        </div>
+
+        <div style={{ position: 'absolute', right: 80, bottom: 80 }}>
+          <GoldCheckerboard cols={4} rows={5} cell={18} />
+        </div>
       </div>
     </SlideFrame>
   )
