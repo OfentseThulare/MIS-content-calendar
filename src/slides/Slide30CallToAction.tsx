@@ -24,7 +24,6 @@ export default function Slide30CallToAction() {
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
-          padding: 120,
         }}
       >
         <div style={{ fontSize: 24, color: brand.colors.lightBg, letterSpacing: '0.06em', fontWeight: 500 }}>

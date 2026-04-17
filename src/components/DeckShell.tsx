@@ -6,7 +6,14 @@ import { brand } from '../lib/brand'
 export default function DeckShell() {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(1)
-  const [scale, setScale] = useState(1)
+  const computeScale = () => {
+    if (typeof window === 'undefined') return 1
+    return Math.min(
+      window.innerWidth / brand.grid.width,
+      window.innerHeight / brand.grid.height,
+    )
+  }
+  const [scale, setScale] = useState(computeScale)
   const containerRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef<number | null>(null)
 
@@ -44,16 +51,9 @@ export default function DeckShell() {
   }, [next, prev, goTo, total])
 
   useLayoutEffect(() => {
-    const compute = () => {
-      if (!containerRef.current) return
-      const { innerWidth, innerHeight } = window
-      const scaleX = innerWidth / brand.grid.width
-      const scaleY = innerHeight / brand.grid.height
-      setScale(Math.min(scaleX, scaleY))
-    }
-    compute()
-    window.addEventListener('resize', compute)
-    return () => window.removeEventListener('resize', compute)
+    const onResize = () => setScale(computeScale())
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
   }, [])
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -124,19 +124,17 @@ export default function DeckShell() {
             position: 'relative',
           }}
         >
-          <AnimatePresence initial={false} custom={direction} mode="wait">
+          <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={current.id}
               custom={direction}
-              initial={{ x: direction > 0 ? 120 : -120, opacity: 1 }}
+              initial={{ x: direction > 0 ? 48 : -48, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: direction > 0 ? -120 : 120, opacity: 1 }}
-              transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+              exit={{ x: direction > 0 ? -48 : 48, opacity: 0 }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
               style={{
                 position: 'absolute',
                 inset: 0,
-                width: brand.grid.width,
-                height: brand.grid.height,
               }}
             >
               <current.component />
@@ -145,21 +143,6 @@ export default function DeckShell() {
         </div>
       </div>
 
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 20,
-          right: 32,
-          color: brand.colors.mutedGreen,
-          fontSize: 12,
-          letterSpacing: '0.18em',
-          fontVariantNumeric: 'tabular-nums',
-          zIndex: 20,
-          fontFamily: brand.fonts.primary,
-        }}
-      >
-        {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
-      </div>
     </div>
   )
 }

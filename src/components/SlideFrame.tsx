@@ -70,9 +70,22 @@ export default function SlideFrame({
           paddingBottom: showChrome ? 56 + padding : padding,
           paddingLeft: padding,
           paddingRight: padding,
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        {children}
+        <div
+          style={{
+            flex: 1,
+            minHeight: 0,
+            width: '100%',
+            maxWidth: brand.grid.width - 2 * padding,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          {children}
+        </div>
       </div>
 
       {showChrome ? (
