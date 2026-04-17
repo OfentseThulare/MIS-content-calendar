@@ -43,7 +43,7 @@ export default function Slide18CampaignArc() {
             border: `1px solid ${brand.colors.sand}`,
             borderRadius: 6,
             overflow: 'hidden',
-            maxWidth: 1750,
+            maxWidth: '100%',
           }}
         >
           <div
@@ -89,7 +89,7 @@ export default function Slide18CampaignArc() {
           ))}
         </div>
 
-        <div style={{ maxWidth: 1750, background: brand.colors.darkGreen, borderRadius: 6, padding: 16 }}>
+        <div style={{ maxWidth: '100%', background: brand.colors.darkGreen, borderRadius: 6, padding: 16 }}>
           <TrajectoryChart
             data={curveData}
             xKey="week"

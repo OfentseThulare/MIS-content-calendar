@@ -38,7 +38,7 @@ export default function Slide23EmailWhatsApp() {
           </h1>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, maxWidth: 1750, flex: 1, minHeight: 0 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, maxWidth: '100%', flex: 1, minHeight: 0 }}>
           <div
             style={{
               background: brand.colors.sand,

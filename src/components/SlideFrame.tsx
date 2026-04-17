@@ -72,6 +72,7 @@ export default function SlideFrame({
           paddingRight: padding,
           display: 'flex',
           flexDirection: 'column',
+          overflow: 'hidden',
         }}
       >
         <div
@@ -79,9 +80,7 @@ export default function SlideFrame({
             flex: 1,
             minHeight: 0,
             width: '100%',
-            maxWidth: brand.grid.width - 2 * padding,
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            alignSelf: 'center',
           }}
         >
           {children}

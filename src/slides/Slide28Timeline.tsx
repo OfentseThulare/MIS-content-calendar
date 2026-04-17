@@ -23,7 +23,7 @@ export default function Slide28Timeline() {
           </h1>
         </div>
 
-        <div style={{ maxWidth: 1750, display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div style={{ maxWidth: '100%', display: 'flex', flexDirection: 'column', gap: 14 }}>
           {phases.map((p, i) => (
             <div key={p.period} style={{ display: 'grid', gridTemplateColumns: '40px 260px 1fr 1fr', gap: 24, alignItems: 'center' }}>
               <div

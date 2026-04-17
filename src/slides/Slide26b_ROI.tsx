@@ -37,7 +37,7 @@ export default function Slide26bROI() {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 36, maxWidth: 1750, flex: 1, minHeight: 0 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 36, maxWidth: '100%', flex: 1, minHeight: 0 }}>
           <div
             style={{
               background: brand.colors.sand,
@@ -156,7 +156,7 @@ export default function Slide26bROI() {
           </div>
         </div>
 
-        <div style={{ color: brand.colors.mutedGreen, fontSize: 12, lineHeight: 1.5, maxWidth: 1750, fontStyle: 'italic' }}>
+        <div style={{ color: brand.colors.mutedGreen, fontSize: 12, lineHeight: 1.5, maxWidth: '100%', fontStyle: 'italic' }}>
           Sponsorship revenue projections are illustrative. They are based on the Intelligence Dossier tier benchmarks for SA B2B events at 300 to 1,000 delegate scale. Actual revenue depends on SAMCA's sponsorship conversations and tier confirmation. Atlas does not guarantee or commit to a sponsorship revenue figure.
         </div>
 

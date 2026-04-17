@@ -79,7 +79,7 @@ export default function Slide17OrganicVsPaid() {
           </h1>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, maxWidth: 1700 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, maxWidth: '100%' }}>
           <Column title="Paid" items={paid} bg={brand.colors.sand} titleColour={brand.colors.darkGreen} labelColour={brand.colors.darkGreen} />
           <Column title="Organic" items={organic} bg={brand.colors.sand} titleColour={brand.colors.darkGreen} labelColour={brand.colors.darkGreen} />
         </div>

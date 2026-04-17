@@ -23,7 +23,7 @@ export default function Slide27WeeklyReport() {
           </h1>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, maxWidth: 1750 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, maxWidth: '100%' }}>
           {sections.map((s) => (
             <div key={s.n} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: 20, alignItems: 'start' }}>
               <div
@@ -50,7 +50,7 @@ export default function Slide27WeeklyReport() {
           ))}
         </div>
 
-        <div style={{ maxWidth: 1750, color: brand.colors.darkGreen, fontSize: 16, lineHeight: 1.5 }}>
+        <div style={{ maxWidth: '100%', color: brand.colors.darkGreen, fontSize: 16, lineHeight: 1.5 }}>
           Daily: Looker Studio dashboard at dash.atlascg.co.za/mis2026, refreshes every 4 hours. Weekly: written report every Monday at 09:00. Fortnightly: check-in with Lee. Monthly: review with Jade.
         </div>
 

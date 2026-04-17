@@ -70,7 +70,7 @@ export default function Slide26FullBudget() {
           </h1>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: 36, maxWidth: 1750 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: 36, maxWidth: '100%' }}>
           <div
             style={{
               background: brand.colors.sand,
@@ -127,7 +127,7 @@ export default function Slide26FullBudget() {
             background: brand.colors.darkGreen,
             borderRadius: 6,
             padding: '18px 24px',
-            maxWidth: 1750,
+            maxWidth: '100%',
             display: 'grid',
             gridTemplateColumns: '1fr 1.4fr',
             gap: 24,
@@ -154,7 +154,7 @@ export default function Slide26FullBudget() {
           </div>
         </div>
 
-        <div style={{ color: brand.colors.darkGreen, fontSize: 15, fontWeight: 500, maxWidth: 1750, lineHeight: 1.5 }}>
+        <div style={{ color: brand.colors.darkGreen, fontSize: 15, fontWeight: 500, maxWidth: '100%', lineHeight: 1.5 }}>
           Joburg Indaba 2024: R2,000 per delegate acquired. MIS 2026 at R500k ad spend: R909 per delegate. 55% more efficient.
         </div>
 

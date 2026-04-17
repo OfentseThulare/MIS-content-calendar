@@ -38,7 +38,7 @@ export default function Slide25Funnel() {
           </h1>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 48, maxWidth: 1750 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 48, maxWidth: '100%' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {steps.map((s, i) => {
               const widthPct = (s.value / max) * 100
@@ -98,7 +98,7 @@ export default function Slide25Funnel() {
           </div>
         </div>
 
-        <div style={{ color: brand.colors.gold, fontSize: 18, fontWeight: 600, maxWidth: 1700, lineHeight: 1.4 }}>
+        <div style={{ color: brand.colors.gold, fontSize: 18, fontWeight: 600, maxWidth: '100%', lineHeight: 1.4 }}>
           Blended delegate acquisition cost: R909 per registered delegate. Joburg Indaba 2024 benchmark: R2,000 per delegate. MIS 2026 is 55% more efficient.
         </div>
 

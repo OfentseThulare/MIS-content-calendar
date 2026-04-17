@@ -6,11 +6,12 @@ import { brand } from '../lib/brand'
 export default function DeckShell() {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(1)
+  const SAFE_BUFFER = 24
   const computeScale = () => {
     if (typeof window === 'undefined') return 1
     return Math.min(
-      window.innerWidth / brand.grid.width,
-      window.innerHeight / brand.grid.height,
+      (window.innerWidth - 2 * SAFE_BUFFER) / brand.grid.width,
+      (window.innerHeight - 2 * SAFE_BUFFER) / brand.grid.height,
     )
   }
   const [scale, setScale] = useState(computeScale)

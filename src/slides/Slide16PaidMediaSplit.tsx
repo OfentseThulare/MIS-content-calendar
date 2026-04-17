@@ -61,7 +61,7 @@ export default function Slide16PaidMediaSplit() {
           </h1>
         </div>
 
-        <div style={{ maxWidth: 1720, display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div style={{ maxWidth: '100%', display: 'flex', flexDirection: 'column', gap: 12 }}>
           {rows.map((r) => (
             <div key={r.platform} style={{ display: 'grid', gridTemplateColumns: '440px 1fr 150px 90px', alignItems: 'center', gap: 18 }}>
               <div>

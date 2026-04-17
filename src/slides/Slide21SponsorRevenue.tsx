@@ -58,7 +58,7 @@ export default function Slide21SponsorRevenue() {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, maxWidth: 1750 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, maxWidth: '100%' }}>
           {rows.map((r) => (
             <div
               key={r.sponsor}

@@ -45,7 +45,7 @@ export default function Slide29Competitors() {
             border: `1px solid ${brand.colors.sand}`,
             borderRadius: 6,
             overflow: 'hidden',
-            maxWidth: 1750,
+            maxWidth: '100%',
           }}
         >
           <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 0.7fr 0.9fr 0.9fr 1.5fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase' }}>

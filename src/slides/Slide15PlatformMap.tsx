@@ -44,7 +44,7 @@ export default function Slide15PlatformMap() {
             border: `1px solid ${brand.colors.sand}`,
             borderRadius: 6,
             overflow: 'hidden',
-            maxWidth: 1700,
+            maxWidth: '100%',
           }}
         >
           <div style={{ display: 'grid', gridTemplateColumns: `160px repeat(${platforms.length}, 1fr)`, background: brand.colors.gold }}>

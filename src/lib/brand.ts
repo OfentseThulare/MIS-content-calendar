@@ -17,7 +17,7 @@ export const brand = {
   grid: {
     width: 1920,
     height: 1080,
-    margin: 80,
+    margin: 64,
     columns: 12,
     gutter: 24,
   },
