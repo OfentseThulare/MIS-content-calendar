@@ -1,6 +1,5 @@
 import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
-import PlaceholderZone from '../components/PlaceholderZone'
 
 const points: Array<{ label: string; body: string }> = [
   {
@@ -73,7 +72,53 @@ export default function Slide23EmailWhatsApp() {
             </div>
           </div>
 
-          <PlaceholderZone label="Email and WhatsApp design concepts to be added" />
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: 6,
+              border: `1.5px solid ${brand.colors.gold}`,
+              overflow: 'hidden',
+              background: '#ffffff',
+              boxShadow: '0 18px 48px rgba(15, 30, 18, 0.16)',
+              display: 'flex',
+              flexDirection: 'column',
+              position: 'relative',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                padding: '10px 16px',
+                borderBottom: `1px solid ${brand.colors.gold}55`,
+                background: brand.colors.sand,
+                flexShrink: 0,
+              }}
+            >
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ED6A5E', display: 'inline-block' }} />
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#F4BF4F', display: 'inline-block' }} />
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#61C554', display: 'inline-block' }} />
+              <div
+                style={{
+                  marginLeft: 12,
+                  color: brand.colors.amber,
+                  fontSize: 11,
+                  letterSpacing: '0.18em',
+                  textTransform: 'uppercase',
+                  fontWeight: 600,
+                }}
+              >
+                Fireside weekly, preview
+              </div>
+            </div>
+            <iframe
+              src="/mis2026-email.html"
+              title="MIS 2026 Fireside weekly email preview"
+              style={{ flex: 1, width: '100%', border: 'none', background: '#ffffff' }}
+            />
+          </div>
         </div>
       </div>
     </SlideFrame>

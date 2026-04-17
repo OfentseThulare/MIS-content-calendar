@@ -1,6 +1,5 @@
 import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
-import PlaceholderZone from '../components/PlaceholderZone'
 
 const calendar: Array<{ day: string; post: string; type: string }> = [
   { day: 'Monday', post: 'Fireside recap clip (60 sec vertical), LinkedIn and YouTube Shorts', type: 'Organic' },
@@ -59,7 +58,33 @@ export default function Slide22DigitalSocial() {
             </div>
           </div>
 
-          <PlaceholderZone label="Creative concepts to be added" />
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              background: brand.colors.sand,
+              borderRadius: 6,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 48,
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            <img
+              src="/atlas-logo-hero.png"
+              alt="Atlas Consulting Group"
+              style={{
+                maxWidth: '78%',
+                maxHeight: '78%',
+                width: 'auto',
+                height: 'auto',
+                objectFit: 'contain',
+                display: 'block',
+              }}
+            />
+          </div>
         </div>
       </div>
     </SlideFrame>

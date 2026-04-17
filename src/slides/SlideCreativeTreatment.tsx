@@ -54,27 +54,20 @@ export default function SlideCreativeTreatment() {
           </div>
         </div>
 
-        {/* [IMAGE: moodboard grid, 4x3. Documentary mining photography in dark green and gold, tight typographic layouts, textural sand backgrounds, gold accent strokes. Flat agency moodboard. 1600x1200.] */}
         <div
           style={{
             width: '100%',
             aspectRatio: '4 / 3',
-            background: brand.colors.sand,
-            border: `1.5px dashed ${brand.colors.gold}`,
             borderRadius: 8,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: brand.colors.amber,
-            fontSize: 13,
-            letterSpacing: '0.18em',
-            textTransform: 'uppercase',
-            fontWeight: 600,
-            textAlign: 'center',
-            padding: 24,
+            overflow: 'hidden',
+            boxShadow: '0 18px 48px rgba(15, 30, 18, 0.18)',
           }}
         >
-          Moodboard,<br />MIS 2026 creative direction
+          <img
+            src="/page27-moodboard.svg"
+            alt="MIS 2026 creative direction moodboard"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
         </div>
       </div>
     </SlideFrame>

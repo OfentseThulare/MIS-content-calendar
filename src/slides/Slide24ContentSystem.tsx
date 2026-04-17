@@ -63,27 +63,20 @@ export default function Slide24ContentSystem() {
             </div>
           </div>
 
-          {/* [IMAGE: grid of six sample deliverables. Top row: LinkedIn carousel cover, vertical Reel thumbnail, YouTube chapter card. Bottom row: Beehiiv newsletter header, WhatsApp audiogram, TikTok poster. Flat vector, SAMCA brand palette. 1600x900.] */}
           <div
             style={{
               width: '100%',
               height: '100%',
-              background: brand.colors.sand,
-              border: `1.5px dashed ${brand.colors.gold}`,
               borderRadius: 8,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: brand.colors.amber,
-              fontSize: 13,
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              fontWeight: 600,
-              textAlign: 'center',
-              padding: 24,
+              overflow: 'hidden',
+              boxShadow: '0 18px 48px rgba(15, 30, 18, 0.18)',
             }}
           >
-            Sample deliverables,<br />six finished pieces
+            <img
+              src="/page30-cta.jpg"
+              alt="Sample Fireside Conversation deliverables, six finished pieces"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
           </div>
         </div>
       </div>
