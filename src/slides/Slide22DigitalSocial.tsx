@@ -60,13 +60,12 @@ export default function Slide22DigitalSocial() {
 
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/atlas-logo-hero.png"
-              alt="Atlas Consulting Group"
+              src="/atlas-logo-hero-v2.png"
+              alt="Ethical leadership and inclusive growth in mining, Mining Integration Summit 2026"
               style={{
-                maxWidth: '100%',
-                maxHeight: '100%',
-                width: 'auto',
+                width: 'calc(100% + 4px)',
                 height: 'auto',
+                maxHeight: 'calc(100% + 4px)',
                 display: 'block',
               }}
             />
