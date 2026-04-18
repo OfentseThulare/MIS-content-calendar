@@ -3,8 +3,8 @@ import SlideFrame from '../components/SlideFrame'
 
 const sections: Array<{ n: string; title: string; body: string }> = [
   { n: '01', title: 'Headline scorecard', body: '7 dashboard pages: overview scorecard, channel performance, content leaderboard, funnel view, segment breakdown, sponsor pipeline, geographic map.' },
-  { n: '02', title: 'Channel performance', body: 'Spend, impressions, clicks, CPC, conversions per channel.' },
-  { n: '03', title: 'Content performance', body: 'Top three and bottom two posts across LinkedIn, Meta, TikTok.' },
+  { n: '02', title: 'Channel performance', body: 'Spend, impressions, clicks, CPC, conversions across LinkedIn, Meta, Google and TikTok.' },
+  { n: '03', title: 'Content performance', body: 'Top three and bottom two posts across LinkedIn, Meta, Google and TikTok.' },
   { n: '04', title: 'Sponsor pipeline', body: 'Prospect, meeting, proposal, negotiation, signed.' },
   { n: '05', title: 'Blockers', body: 'Decisions needed from Jade before next Monday.' },
   { n: '06', title: 'Next week plan', body: 'Content, outreach, paid spend, experiments.' },

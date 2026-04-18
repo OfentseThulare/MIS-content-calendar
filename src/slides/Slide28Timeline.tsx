@@ -2,12 +2,12 @@ import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
 
 const phases: Array<{ period: string; phase: string; milestone: string }> = [
-  { period: 'Now to 30 Apr', phase: 'Foundation and go-live', milestone: 'Outreach live, prospectus in production' },
-  { period: '1 to 31 May', phase: 'Sponsor close sprint', milestone: 'All six sponsor commitments confirmed by 31 May' },
-  { period: '16 May to 30 Jun', phase: 'Conversion window', milestone: 'Registrations open, 400 delegates' },
-  { period: '1 to 19 Jul', phase: 'Final push', milestone: 'Sold out messaging, logistics confirmed' },
+  { period: '20 Apr to 31 May', phase: 'Foundation and sponsor close', milestone: 'Paid media live, all six sponsor commitments confirmed' },
+  { period: '1 Jun to 12 Jul', phase: 'Conversion window', milestone: 'Registrations open, 450 delegates by 12 July' },
+  { period: '13 to 19 Jul', phase: 'Final push', milestone: 'Sold out messaging, logistics confirmed, 550 delegates' },
   { period: '20 to 22 Jul', phase: 'Event live', milestone: 'Three days, three programmes' },
-  { period: '23 Jul onwards', phase: 'Post event', milestone: 'Impact report in 14 days, sponsor renewal' },
+  { period: '23 Jul to 27 Aug', phase: 'Amplify and report', milestone: 'Paid media continues through 27 August to amplify outcomes' },
+  { period: '28 Aug onwards', phase: 'Post campaign', milestone: 'Impact report published, sponsor renewal conversations' },
 ]
 
 export default function Slide28Timeline() {
@@ -47,7 +47,7 @@ export default function Slide28Timeline() {
         </div>
 
         <div style={{ maxWidth: 1500, color: brand.colors.gold, fontSize: 14, lineHeight: 1.5, fontStyle: 'italic' }}>
-          From 1 June: no new sponsorship conversations. Atlas and SAMCA shift entirely to delegate acquisition, speaker announcements, and programme reveals.
+          From 1 June: no new sponsorship conversations. Atlas and SAMCA shift entirely to delegate acquisition, speaker announcements, and programme reveals. Paid media continues through 27 August to amplify outcomes.
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.sand, fontSize: 12, letterSpacing: '0.16em' }}>

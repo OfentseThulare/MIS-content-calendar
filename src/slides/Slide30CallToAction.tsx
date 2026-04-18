@@ -6,7 +6,7 @@ const approvals: Array<{ n: string; title: string; detail: string }> = [
   {
     n: '01',
     title: 'Approve the scope and investment',
-    detail: 'R415,620 Atlas retainer across three months, plus R500,000 client-controlled ad budget.',
+    detail: 'R415,620 Atlas retainer across three months, plus R550,000 client-controlled paid media budget.',
   },
   {
     n: '02',

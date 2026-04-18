@@ -15,10 +15,10 @@ const tiers: TierRow[] = [
 ]
 
 const scenarios: ScenarioRow[] = [
-  { scenario: 'Conservative', fill: '40%', sponsor: 'R1,720,000', investment: 'R915,620', ret: '1.9x' },
-  { scenario: 'Moderate', fill: '60%', sponsor: 'R2,580,000', investment: 'R915,620', ret: '2.8x' },
-  { scenario: 'Target', fill: '80%', sponsor: 'R3,440,000', investment: 'R915,620', ret: '3.8x' },
-  { scenario: 'Full sell-out', fill: '100%', sponsor: 'R4,300,000+', investment: 'R915,620', ret: '4.7x+', emphasis: true },
+  { scenario: 'Conservative', fill: '40%', sponsor: 'R1,720,000', investment: 'R965,620', ret: '1.8x' },
+  { scenario: 'Moderate', fill: '60%', sponsor: 'R2,580,000', investment: 'R965,620', ret: '2.7x' },
+  { scenario: 'Target', fill: '80%', sponsor: 'R3,440,000', investment: 'R965,620', ret: '3.6x' },
+  { scenario: 'Full sell-out', fill: '100%', sponsor: 'R4,300,000+', investment: 'R965,620', ret: '4.5x+', emphasis: true },
 ]
 
 export default function Slide26bROI() {
@@ -151,7 +151,7 @@ export default function Slide26bROI() {
               </div>
             ))}
             <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.3)', color: brand.colors.mutedGreen, fontSize: 12, lineHeight: 1.5 }}>
-              Total investment = R415,620 (Atlas Tier 2) plus R500,000 (recommended ad budget) = R915,620.
+              Total investment = R415,620 (Atlas Tier 2) plus R550,000 (approved paid media budget) = R965,620.
             </div>
           </div>
         </div>

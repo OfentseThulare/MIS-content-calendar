@@ -4,19 +4,18 @@ import SlideFrame from '../components/SlideFrame'
 type ListItem = { label: string; detail: string }
 
 const paid: ListItem[] = [
-  { label: 'LinkedIn Lead Gen Forms', detail: '8 to 13% form completion rate (Metric Theory SA 2024)' },
-  { label: 'LinkedIn Conversation Ads', detail: 'Direct inbox delivery to named executives and ESG leads' },
-  { label: 'Google Search', detail: 'R18 to R42 CPC on mining keywords (Keyword Planner SA, April 2026)' },
+  { label: 'LinkedIn Sponsored Content and Lead Gen Forms', detail: '8 to 13% form completion rate (Metric Theory SA 2024)' },
   { label: 'Meta Reels and Stories', detail: 'R50.76 CPM (Gupta Media SA 2025), Communities and Schools only' },
+  { label: 'Google Search', detail: 'R18 to R42 CPC on mining keywords (Keyword Planner SA, April 2026)' },
   { label: 'TikTok In-feed', detail: 'R0.27 average CPM, schools and youth audiences only' },
 ]
 
 const organic: ListItem[] = [
-  { label: 'Fireside Conversation series', detail: '12 weekly episodes, every Thursday 7pm to 9pm' },
+  { label: 'Fireside Conversation series', detail: '18 weekly episodes, every Thursday 7pm to 9pm' },
   { label: 'LinkedIn organic content calendar', detail: '3 to 5 posts per week. Speaker reveals, endorsements, countdown.' },
-  { label: 'Beehiiv newsletter', detail: 'Weekly Fireside digest. Grows from 500 to 4,200 subscribers over 12 weeks.' },
-  { label: 'WhatsApp broadcast list', detail: '95% open rate within 30 minutes. POPIA compliant via Turn.io.' },
-  { label: 'YouTube Fireside archive', detail: 'Four full episodes plus 24 Shorts over campaign window.' },
+  { label: 'Beehiiv newsletter', detail: 'Weekly Fireside digest. Grows from 500 to 4,200 subscribers across the flight.' },
+  { label: 'WhatsApp broadcast list via Turn.io', detail: '95% open rate within 30 minutes. POPIA compliant. 3,800 opted-in contacts.' },
+  { label: 'YouTube Fireside archive', detail: 'Full episodes plus short-form clips across the campaign window.' },
 ]
 
 function Column({

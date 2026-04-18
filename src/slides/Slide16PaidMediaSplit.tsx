@@ -3,46 +3,32 @@ import SlideFrame from '../components/SlideFrame'
 
 const rows: Array<{ platform: string; budget: number; share: string; colour: string; note: string }> = [
   {
-    platform: 'LinkedIn, Sponsored Content, InMail, Lead Gen Forms',
-    budget: 225000,
-    share: '45%',
+    platform: 'LinkedIn, Sponsored Content and Lead Gen Forms',
+    budget: 221750,
+    share: '40.3%',
     colour: brand.colors.gold,
     note: 'Primary for Execs, Sponsors, Government',
   },
   {
-    platform: 'Google, Search, Display Retargeting, YouTube Pre-roll',
-    budget: 120000,
-    share: '24%',
-    colour: brand.colors.amber,
-    note: 'Captures high-intent search, retargets bounced visitors',
-  },
-  {
     platform: 'Meta, Facebook and Instagram',
-    budget: 95000,
-    share: '19%',
+    budget: 128250,
+    share: '23.3%',
     colour: brand.colors.sage,
-    note: 'Primary for Communities and Schools (NW Province geo)',
+    note: 'Primary for Communities and Schools, NW Province geo',
   },
   {
-    platform: 'TikTok',
-    budget: 22000,
-    share: '4.4%',
+    platform: 'Google, Search',
+    budget: 125000,
+    share: '22.7%',
+    colour: brand.colors.amber,
+    note: 'Captures high-intent search on mining keywords',
+  },
+  {
+    platform: 'TikTok, In-feed',
+    budget: 75000,
+    share: '13.7%',
     colour: brand.colors.sand,
     note: 'Schools and youth audiences only',
-  },
-  {
-    platform: 'WhatsApp Business via Turn.io',
-    budget: 22000,
-    share: '4.4%',
-    colour: brand.colors.mutedGreen,
-    note: '3,800 opted-in contacts, R0.68 per marketing template',
-  },
-  {
-    platform: 'Community Radio, Kgatleng FM, Mafisa, Motheo FM',
-    budget: 16000,
-    share: '3.2%',
-    colour: brand.colors.darkBrown,
-    note: 'Pending confirmation from media planner',
   },
 ]
 
@@ -57,13 +43,13 @@ export default function Slide16PaidMediaSplit() {
             Paid media
           </div>
           <h1 style={{ fontSize: 56, fontWeight: 600, color: brand.colors.gold, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
-            R500,000 recommended client-controlled ad budget
+            R550,000 client-controlled paid media budget, 20 April to 27 August 2026
           </h1>
         </div>
 
         <div style={{ maxWidth: '100%', display: 'flex', flexDirection: 'column', gap: 12 }}>
           {rows.map((r) => (
-            <div key={r.platform} style={{ display: 'grid', gridTemplateColumns: '440px 1fr 150px 90px', alignItems: 'center', gap: 18 }}>
+            <div key={r.platform} style={{ display: 'grid', gridTemplateColumns: '420px 1fr 150px 90px', alignItems: 'center', gap: 18 }}>
               <div>
                 <div style={{ color: brand.colors.lightBg, fontSize: 16, fontWeight: 500 }}>{r.platform}</div>
                 <div style={{ color: brand.colors.sand, fontSize: 12, marginTop: 3, lineHeight: 1.4 }}>{r.note}</div>
@@ -89,11 +75,11 @@ export default function Slide16PaidMediaSplit() {
         </div>
 
         <div style={{ color: brand.colors.sand, fontSize: 13, lineHeight: 1.5, maxWidth: 1500, fontStyle: 'italic' }}>
-          This budget is held in a client-controlled account. It is not paid to Atlas. It is managed by Atlas on SAMCA's behalf. Community radio allocation is pending media planner confirmation.
+          This budget is held in a client-controlled account. It is not paid to Atlas. It is managed by Atlas on SAMCA's behalf across four platforms over an 18 week flight from 20 April to 27 August 2026.
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.sand, fontSize: 12, letterSpacing: '0.16em' }}>
-          Source: Master Strategy Part D1, April 2026 | Benchmarks: SuperAds, Gupta Media SA 2025, Google Keyword Planner SA April 2026
+          Source: SAMCA Media Planner, April 2026 | Benchmarks: SuperAds, Gupta Media SA 2025, Google Keyword Planner SA April 2026
         </div>
       </div>
     </SlideFrame>

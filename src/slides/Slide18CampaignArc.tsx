@@ -11,18 +11,17 @@ type Phase = {
 }
 
 const phases: Phase[] = [
-  { name: 'Build the case', weeks: 'W1 to 3, 27 Apr to 17 May', theme: 'Why this summit matters now', outcome: '500 warm list, 1 sponsor announced', budget: 'R95k, 10%' },
-  { name: 'Fill the room', weeks: 'W4 to 6, 18 May to 7 Jun', theme: 'Who is already in the room', outcome: 'Sponsors closed, 200 registrations', budget: 'R285k, 30%' },
-  { name: 'Prove substance', weeks: 'W7 to 9, 8 Jun to 28 Jun', theme: 'What you get for three days', outcome: 'Agenda live, 400 registrations', budget: 'R285k, 30%' },
-  { name: 'Final push', weeks: 'W10 to 12, 29 Jun to 19 Jul', theme: 'Do not miss the table', outcome: '550 registered, waitlist active', budget: 'R285k, 30%' },
+  { name: 'Build the case', weeks: 'W1 to 6, 20 Apr to 31 May', theme: 'Why this summit matters now, who is already in', outcome: 'Sponsors closed, 200 registrations, warm list of 2,500', budget: 'R165k, 30%' },
+  { name: 'Prove substance', weeks: 'W7 to 12, 1 Jun to 12 Jul', theme: 'What you get for three days on the ground', outcome: 'Agenda live, 450 registrations', budget: 'R220k, 40%' },
+  { name: 'Final push and amplify', weeks: 'W13 to 18, 13 Jul to 27 Aug', theme: 'Do not miss the table, then amplify the outcomes', outcome: '550 delegates, post-event reach through August', budget: 'R165k, 30%' },
 ]
 
 const curveData = [
-  { week: 'W0', delegates: 0 },
-  { week: 'W3', delegates: 50 },
-  { week: 'W6', delegates: 200 },
-  { week: 'W9', delegates: 400 },
-  { week: 'W12', delegates: 550 },
+  { week: 'Apr', delegates: 0 },
+  { week: 'May', delegates: 120 },
+  { week: 'Jun', delegates: 280 },
+  { week: 'Jul', delegates: 500 },
+  { week: 'Aug', delegates: 550 },
 ]
 
 export default function Slide18CampaignArc() {
@@ -31,10 +30,10 @@ export default function Slide18CampaignArc() {
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
-            Part B4, campaign arc
+            Paid media flight plan
           </div>
           <h1 style={{ fontSize: 52, fontWeight: 600, color: brand.colors.darkGreen, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
-            12 weeks, four phases. Sponsors close by Week 6, delegates fill by Week 12.
+            18 weeks, three phases. 20 April to 27 August 2026.
           </h1>
         </div>
 
@@ -99,7 +98,7 @@ export default function Slide18CampaignArc() {
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.mutedGreen, fontSize: 12, letterSpacing: '0.16em' }}>
-          Source: Part B4, MIS 2026 Master Strategy
+          Source: SAMCA Media Planner, April 2026 | Master Strategy Part B4
         </div>
       </div>
     </SlideFrame>

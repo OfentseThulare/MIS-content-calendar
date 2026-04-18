@@ -47,12 +47,10 @@ const rows: Row[] = [
 const slices: BudgetSlice[] = rows.map((r) => ({ name: r.category, value: r.amount, colour: r.colour }))
 
 const adRows: Array<{ platform: string; amount: string }> = [
-  { platform: 'LinkedIn', amount: 'R225,000' },
-  { platform: 'Google', amount: 'R120,000' },
-  { platform: 'Meta', amount: 'R95,000' },
-  { platform: 'TikTok', amount: 'R22,000' },
-  { platform: 'WhatsApp', amount: 'R22,000' },
-  { platform: 'Community Radio', amount: 'R16,000' },
+  { platform: 'LinkedIn', amount: 'R221,750' },
+  { platform: 'Meta', amount: 'R128,250' },
+  { platform: 'Google', amount: 'R125,000' },
+  { platform: 'TikTok', amount: 'R75,000' },
 ]
 
 export default function Slide26FullBudget() {
@@ -136,16 +134,16 @@ export default function Slide26FullBudget() {
         >
           <div>
             <div style={{ color: brand.colors.gold, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
-              Client-controlled ad budget (not paid to Atlas)
+              Client-controlled paid media budget (not paid to Atlas)
             </div>
             <div style={{ color: brand.colors.lightBg, fontSize: 18, fontWeight: 600, marginTop: 6 }}>
-              R500,000 recommended
+              R550,000 approved
             </div>
             <div style={{ color: brand.colors.sand, fontSize: 13, marginTop: 4 }}>
-              R380,000 minimum | R950,000 stretch
+              20 April to 27 August 2026, four platforms
             </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
             {adRows.map((a) => (
               <div key={a.platform} style={{ color: brand.colors.sand, fontSize: 13 }}>
                 <span style={{ color: brand.colors.gold, fontWeight: 600 }}>{a.platform}</span> {a.amount}
@@ -155,7 +153,7 @@ export default function Slide26FullBudget() {
         </div>
 
         <div style={{ color: brand.colors.darkGreen, fontSize: 15, fontWeight: 500, maxWidth: '100%', lineHeight: 1.5 }}>
-          Joburg Indaba 2024: R2,000 per delegate acquired. MIS 2026 at R500k ad spend: R909 per delegate. 55% more efficient.
+          Joburg Indaba 2024: R2,000 per delegate acquired. MIS 2026 at R550k paid media spend: R1,000 per delegate. 50% more efficient.
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.mutedGreen, fontSize: 12, letterSpacing: '0.16em' }}>

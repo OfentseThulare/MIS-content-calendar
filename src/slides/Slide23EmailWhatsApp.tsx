@@ -4,7 +4,7 @@ import SlideFrame from '../components/SlideFrame'
 const points: Array<{ label: string; body: string }> = [
   {
     label: 'Fireside weekly newsletter (Beehiiv)',
-    body: 'Published every Monday. Five sections: pillar of the week, Fireside episode preview, speaker spotlight, community highlight, registration CTA. Grows from 500 to 4,200 subscribers over 12 weeks.',
+    body: 'Published every Monday. Five sections: pillar of the week, Fireside episode preview, speaker spotlight, community highlight, registration CTA. Grows from 500 to 4,200 subscribers across the 18 week flight.',
   },
   {
     label: 'Five-touch delegate nurture sequence',

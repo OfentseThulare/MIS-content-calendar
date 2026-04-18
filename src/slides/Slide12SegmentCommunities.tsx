@@ -21,7 +21,7 @@ export default function Slide12SegmentCommunities() {
             badge="150 community delegates, complimentary passes, transport and accommodation supported"
             who="Community leaders, tribal authorities, youth organisations, women in mining groups"
             hook="Three requests. Sixty days to answer. On the record."
-            channels="WhatsApp broadcast lists via SAMCA existing community networks, Facebook (Rustenburg, Carletonville, Welkom, Kimberley geotargeting), community radio (Kgatleng FM, Mafisa Community Radio, Motheo FM)"
+            channels="WhatsApp broadcast lists via SAMCA existing community networks, Meta geotargeting across Rustenburg, Carletonville, Welkom and Kimberley, community liaison leads on the ground in North West Province"
             proof="Signed memoranda from three host community councils"
           />
         </div>
