@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { brand } from '../lib/brand'
 import DataCard from './DataCard'
 
@@ -10,6 +11,38 @@ type SegmentCardProps = {
   proof?: string
 }
 
+function Field({ label, children, italic = false }: { label: string; children: ReactNode; italic?: boolean }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <div
+        style={{
+          color: brand.colors.mutedGreen,
+          fontSize: 13,
+          fontWeight: 500,
+          letterSpacing: '0.22em',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+        }}
+      >
+        {label}
+      </div>
+      <div
+        style={{
+          fontSize: 18,
+          fontWeight: 400,
+          lineHeight: 1.55,
+          color: brand.colors.bodyText,
+          maxWidth: 880,
+          textAlign: 'center',
+          fontStyle: italic ? 'italic' : 'normal',
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  )
+}
+
 export default function SegmentCard({
   title,
   badge,
@@ -19,10 +52,9 @@ export default function SegmentCard({
   proof,
 }: SegmentCardProps) {
   return (
-    <div style={{ fontFamily: brand.fonts.primary }}>
+    <div style={{ fontFamily: brand.fonts.primary, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div
         style={{
-          display: 'inline-block',
           background: brand.colors.amber,
           color: brand.colors.lightBg,
           fontSize: 14,
@@ -31,24 +63,26 @@ export default function SegmentCard({
           borderRadius: 4,
           letterSpacing: '0.02em',
           marginBottom: 20,
+          textAlign: 'center',
         }}
       >
         {badge}
       </div>
-      <DataCard title={title}>
-        <div style={{ display: 'grid', gridTemplateColumns: '96px 1fr', rowGap: 12, columnGap: 12 }}>
-          <div style={{ color: brand.colors.amber, fontWeight: 600, fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Who</div>
-          <div>{who}</div>
-          <div style={{ color: brand.colors.amber, fontWeight: 600, fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Hook</div>
-          <div style={{ fontStyle: 'italic' }}>&ldquo;{hook}&rdquo;</div>
-          <div style={{ color: brand.colors.amber, fontWeight: 600, fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Channels</div>
-          <div>{channels}</div>
-          {proof ? (
-            <>
-              <div style={{ color: brand.colors.amber, fontWeight: 600, fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Proof</div>
-              <div>{proof}</div>
-            </>
-          ) : null}
+      <DataCard title={title} centred style={{ width: '100%' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 20,
+            alignItems: 'center',
+          }}
+        >
+          <Field label="Who">{who}</Field>
+          <Field label="Hook" italic>
+            &ldquo;{hook}&rdquo;
+          </Field>
+          <Field label="Channels">{channels}</Field>
+          {proof ? <Field label="Proof">{proof}</Field> : null}
         </div>
       </DataCard>
     </div>

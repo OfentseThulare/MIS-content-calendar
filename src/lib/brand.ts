@@ -1,3 +1,5 @@
+import { type } from './typography'
+
 export const brand = {
   colors: {
     darkGreen: "#264527",
@@ -21,4 +23,8 @@ export const brand = {
     columns: 12,
     gutter: 24,
   },
+  type,
 } as const;
+
+export { type } from './typography'
+export type { TypeRole } from './typography'
