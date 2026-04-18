@@ -63,7 +63,7 @@ export default function Slide21SponsorRevenue() {
           {rows.map((r) => (
             <DataCard key={r.sponsor} accentColor={brand.colors.amber}>
               <div style={{ color: brand.colors.darkGreen, fontSize: 18, fontWeight: 600 }}>{r.sponsor}</div>
-              <div style={{ color: brand.colors.amber, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', marginTop: 4, fontWeight: 600 }}>
+              <div style={{ color: brand.colors.amber, fontSize: 13, letterSpacing: '0.16em', textTransform: 'uppercase', marginTop: 4, fontWeight: 600 }}>
                 {r.kpi}
               </div>
               <div style={{ color: brand.colors.amber, fontSize: 13, fontWeight: 600, marginTop: 6 }}>

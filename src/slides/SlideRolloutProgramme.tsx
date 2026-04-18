@@ -64,7 +64,7 @@ export default function SlideRolloutProgramme() {
               }}
             >
               <div>
-                <div style={{ color: brand.colors.gold, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
+                <div style={{ color: brand.colors.gold, fontSize: 13, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
                   {d.label}
                 </div>
                 <div style={{ color: brand.colors.lightBg, fontSize: 22, fontWeight: 600, marginTop: 6, letterSpacing: '-0.005em' }}>

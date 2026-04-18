@@ -56,7 +56,7 @@ export default function Slide26bROI() {
                 background: brand.colors.gold,
                 color: brand.colors.darkGreen,
                 fontWeight: 600,
-                fontSize: 12,
+                fontSize: 13,
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
               }}
@@ -111,7 +111,7 @@ export default function Slide26bROI() {
                 background: brand.colors.gold,
                 color: brand.colors.darkGreen,
                 fontWeight: 600,
-                fontSize: 12,
+                fontSize: 13,
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
               }}
@@ -150,13 +150,13 @@ export default function Slide26bROI() {
                 </div>
               </div>
             ))}
-            <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.3)', color: brand.colors.mutedGreen, fontSize: 12, lineHeight: 1.5 }}>
+            <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.3)', color: brand.colors.mutedGreen, fontSize: 13, lineHeight: 1.5 }}>
               Total investment = R415,620 (Atlas Tier 2) plus R550,000 (approved paid media budget) = R965,620.
             </div>
           </div>
         </div>
 
-        <div style={{ color: brand.colors.mutedGreen, fontSize: 12, lineHeight: 1.5, maxWidth: '100%', fontStyle: 'italic' }}>
+        <div style={{ color: brand.colors.mutedGreen, fontSize: 13, lineHeight: 1.5, maxWidth: '100%', fontStyle: 'italic' }}>
           Sponsorship revenue projections are illustrative. They are based on the Intelligence Dossier tier benchmarks for SA B2B events at 300 to 1,000 delegate scale. Actual revenue depends on SAMCA's sponsorship conversations and tier confirmation. Atlas does not guarantee or commit to a sponsorship revenue figure.
         </div>
 

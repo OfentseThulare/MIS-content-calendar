@@ -92,7 +92,7 @@ export default function Slide01Title() {
         <div style={{ marginTop: 'auto' }}>
           <div
             style={{
-              fontSize: 9,
+              fontSize: 13,
               letterSpacing: '0.32em',
               color: brand.colors.gold,
               textTransform: 'uppercase',
@@ -104,7 +104,7 @@ export default function Slide01Title() {
           <div
             style={{
               marginTop: 10,
-              fontSize: 9,
+              fontSize: 13,
               fontStyle: 'italic',
               color: brand.colors.mutedGreen,
               letterSpacing: '0.06em',

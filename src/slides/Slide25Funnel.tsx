@@ -72,7 +72,7 @@ export default function Slide25Funnel() {
               overflow: 'hidden',
             }}
           >
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 0.7fr 0.7fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 0.7fr 0.7fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
               <div style={{ padding: '10px 14px' }}>Source</div>
               <div style={{ padding: '10px 14px', borderLeft: `1px solid ${brand.colors.darkGreen}22` }}>Delegates</div>
               <div style={{ padding: '10px 14px', borderLeft: `1px solid ${brand.colors.darkGreen}22` }}>CAC</div>

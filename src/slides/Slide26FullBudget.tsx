@@ -77,7 +77,7 @@ export default function Slide26FullBudget() {
               position: 'relative',
             }}
           >
-            <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 0.8fr 0.8fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 0.8fr 0.8fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
               <div style={{ padding: '10px 16px' }}>Category</div>
               <div style={{ padding: '10px 16px', borderLeft: `1px solid ${brand.colors.darkGreen}22` }}>Amount</div>
               <div style={{ padding: '10px 16px', borderLeft: `1px solid ${brand.colors.darkGreen}22` }}>Cadence</div>
@@ -133,7 +133,7 @@ export default function Slide26FullBudget() {
           }}
         >
           <div>
-            <div style={{ color: brand.colors.gold, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <div style={{ color: brand.colors.gold, fontSize: 13, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
               Client-controlled paid media budget (not paid to Atlas)
             </div>
             <div style={{ color: brand.colors.lightBg, fontSize: 18, fontWeight: 600, marginTop: 6 }}>

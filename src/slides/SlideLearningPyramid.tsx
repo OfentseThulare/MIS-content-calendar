@@ -44,7 +44,7 @@ export default function SlideLearningPyramid() {
                 >
                   {l.label}
                 </div>
-                <div style={{ color: brand.colors.mutedGreen, fontSize: 12, minWidth: 110, fontWeight: 500 }}>{l.retention}</div>
+                <div style={{ color: brand.colors.mutedGreen, fontSize: 13, minWidth: 110, fontWeight: 500 }}>{l.retention}</div>
               </div>
             ))}
           </div>

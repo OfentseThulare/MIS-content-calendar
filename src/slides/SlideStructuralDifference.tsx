@@ -32,7 +32,7 @@ export default function SlideStructuralDifference() {
             maxWidth: 1600,
           }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 13, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
             <div style={{ padding: '12px 20px' }}>Other mining gatherings</div>
             <div style={{ padding: '12px 20px', borderLeft: `1px solid ${brand.colors.darkGreen}22` }}>MIS 2026</div>
           </div>

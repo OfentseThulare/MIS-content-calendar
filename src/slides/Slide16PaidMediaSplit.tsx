@@ -52,7 +52,7 @@ export default function Slide16PaidMediaSplit() {
             <div key={r.platform} style={{ display: 'grid', gridTemplateColumns: '420px 1fr 150px 90px', alignItems: 'center', gap: 18 }}>
               <div>
                 <div style={{ color: brand.colors.lightBg, fontSize: 16, fontWeight: 500 }}>{r.platform}</div>
-                <div style={{ color: brand.colors.sand, fontSize: 12, marginTop: 3, lineHeight: 1.4 }}>{r.note}</div>
+                <div style={{ color: brand.colors.sand, fontSize: 13, marginTop: 3, lineHeight: 1.4 }}>{r.note}</div>
               </div>
               <div style={{ height: 20, background: 'rgba(255,255,255,0.06)', borderRadius: 3, position: 'relative' }}>
                 <div

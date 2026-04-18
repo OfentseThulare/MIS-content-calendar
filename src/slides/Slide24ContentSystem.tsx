@@ -26,7 +26,7 @@ export default function Slide24ContentSystem() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, maxWidth: '100%', flex: 1, minHeight: 0 }}>
           <DataCard>
-            <div style={{ color: brand.colors.amber, fontSize: 12, letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <div style={{ color: brand.colors.amber, fontSize: 13, letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
               One Fireside, five pieces, under four hours
             </div>
             <div style={{ marginTop: 18, color: brand.colors.darkGreen, fontSize: 18, fontWeight: 500 }}>

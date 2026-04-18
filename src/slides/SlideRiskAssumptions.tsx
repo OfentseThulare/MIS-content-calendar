@@ -60,7 +60,7 @@ export default function SlideRiskAssumptions() {
               overflow: 'hidden',
             }}
           >
-            <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 0.5fr 1.6fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 0.5fr 1.6fr', background: brand.colors.gold, color: brand.colors.darkGreen, fontWeight: 600, fontSize: 13, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
               <div style={{ padding: '10px 16px' }}>Risk</div>
               <div style={{ padding: '10px 16px', borderLeft: `1px solid ${brand.colors.darkGreen}22` }}>Likelihood</div>
               <div style={{ padding: '10px 16px', borderLeft: `1px solid ${brand.colors.darkGreen}22` }}>Mitigation</div>
@@ -93,7 +93,7 @@ export default function SlideRiskAssumptions() {
               gap: 12,
             }}
           >
-            <div style={{ color: brand.colors.gold, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <div style={{ color: brand.colors.gold, fontSize: 13, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
               The plan assumes
             </div>
             <div style={{ height: 1, background: brand.colors.gold, opacity: 0.4 }} />

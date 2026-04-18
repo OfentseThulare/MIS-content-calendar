@@ -85,7 +85,7 @@ export default function Slide15PlatformMap() {
                         display: 'inline-block',
                         background: bg,
                         color: fg,
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: 600,
                         letterSpacing: '0.06em',
                         padding: '4px 8px',
