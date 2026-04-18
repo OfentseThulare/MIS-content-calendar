@@ -47,7 +47,7 @@ export default function Slide24ContentSystem() {
             </div>
           </DataCard>
 
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 11 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 8, minWidth: 0, minHeight: 0, overflow: 'hidden' }}>
             <img
               src="/page30-cta.jpg"
               alt="Sample Fireside Conversation deliverables, six finished pieces"
@@ -57,7 +57,6 @@ export default function Slide24ContentSystem() {
                 width: 'auto',
                 height: 'auto',
                 display: 'block',
-                transform: 'translateY(-5px)',
               }}
             />
           </div>
