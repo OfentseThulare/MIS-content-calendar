@@ -72,6 +72,7 @@ export default function Slide24ContentSystem() {
               width: 'auto',
               height: 'auto',
               display: 'block',
+              transform: 'translateY(-5px)',
             }}
           />
         </div>
