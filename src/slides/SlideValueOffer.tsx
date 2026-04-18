@@ -6,7 +6,7 @@ type Offer = { title: string; body: string }
 const offers: Offer[] = [
   {
     title: 'A single accountable delivery partner',
-    body: 'One contract, one project lead, one weekly report. Atlas owns the outcome from outreach to post-event repurposing.',
+    body: 'One contract, one project lead, one biweekly report. Atlas owns the outcome from outreach to post-event repurposing.',
   },
   {
     title: 'Infrastructure SAMCA keeps after the summit',
