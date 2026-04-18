@@ -6,8 +6,8 @@ const sections: Array<{ n: string; title: string; body: string }> = [
   { n: '02', title: 'Channel performance', body: 'Spend, impressions, clicks, CPC, conversions across LinkedIn, Meta, Google and TikTok.' },
   { n: '03', title: 'Content performance', body: 'Top three and bottom two posts across LinkedIn, Meta, Google and TikTok.' },
   { n: '04', title: 'Sponsor pipeline', body: 'Prospect, meeting, proposal, negotiation, signed.' },
-  { n: '05', title: 'Blockers', body: 'Decisions needed from Jade before next Monday.' },
-  { n: '06', title: 'Next week plan', body: 'Content, outreach, paid spend, experiments.' },
+  { n: '05', title: 'Blockers', body: 'Decisions needed from Jade before the next cycle.' },
+  { n: '06', title: 'Next cycle plan', body: 'Content, outreach, paid spend, experiments.' },
 ]
 
 export default function Slide27WeeklyReport() {
@@ -19,7 +19,7 @@ export default function Slide27WeeklyReport() {
             Reporting rhythm
           </div>
           <h1 style={{ fontSize: 56, fontWeight: 600, color: brand.colors.darkGreen, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
-            Every Monday at 09:00
+            Every second Monday at 09:00
           </h1>
         </div>
 
@@ -51,7 +51,7 @@ export default function Slide27WeeklyReport() {
         </div>
 
         <div style={{ maxWidth: '100%', color: brand.colors.darkGreen, fontSize: 16, lineHeight: 1.5 }}>
-          Daily: Looker Studio dashboard at dash.atlascg.co.za/mis2026, refreshes every 4 hours. Weekly: written report every Monday at 09:00. Fortnightly: check-in with Lee. Monthly: review with Jade.
+          Daily: Looker Studio dashboard at dash.atlascg.co.za/mis2026, refreshes every 4 hours. Biweekly: written report every second Monday at 09:00, paired with a check-in with Lee. Monthly: review with Jade.
         </div>
 
         <div style={{ marginTop: 'auto', color: brand.colors.mutedGreen, fontSize: 12, letterSpacing: '0.16em' }}>
