@@ -113,15 +113,15 @@ export default function Slide30CallToAction() {
             letterSpacing: '0.04em',
           }}
         >
-          Ofentse Thulare | Atlas Consulting Group | ofentse@atlascg.co.za
+          Prepared by Atlas Consulting Group | info@atlascg.co.za
         </div>
 
-        <div style={{ position: 'absolute', left: 0, bottom: 0, opacity: 0.45 }}>
-          <GoldCheckerboard cols={4} rows={5} cell={16} />
-        </div>
         <div style={{ position: 'absolute', right: 0, bottom: 0, opacity: 0.45, transform: 'rotate(180deg)' }}>
           <GoldCheckerboard cols={4} rows={5} cell={16} />
         </div>
+      </div>
+      <div style={{ position: 'absolute', left: 0, bottom: 0, opacity: 0.45 }}>
+        <GoldCheckerboard cols={4} rows={5} cell={16} />
       </div>
     </SlideFrame>
   )
