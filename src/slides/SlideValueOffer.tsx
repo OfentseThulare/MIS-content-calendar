@@ -14,11 +14,11 @@ const offers: Offer[] = [
   },
   {
     title: 'A pipeline designed for 500 to 600 qualified delegates',
-    body: 'Automated direct outreach at 1,000 segmented touchpoints per day. Every positive response escalated to SAMCA inside 24 hours.',
+    body: 'Automated direct outreach with segmented touchpoints at the target market daily. Every positive response escalated to SAMCA inside 24 hours.',
   },
   {
-    title: 'A commercial instrument that funds the next edition',
-    body: 'Six named sponsors, five tiers, up to R9.75m at full sell-out. MIS 2027 in market before MIS 2026 closes.',
+    title: 'A sponsor intelligence engine that feeds SAMCA\'s pitch',
+    body: 'Every outreach response, open, and engagement event becomes real-time account heat. SAMCA walks into every sponsor conversation with live audience signal, not a cold brief.',
   },
 ]
 
