@@ -1,5 +1,6 @@
 import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
+import DataCard from '../components/DataCard'
 
 type SponsorRow = { sponsor: string; kpi: string; angle: string; tier: string }
 
@@ -60,27 +61,7 @@ export default function Slide21SponsorRevenue() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, maxWidth: '100%' }}>
           {rows.map((r) => (
-            <div
-              key={r.sponsor}
-              style={{
-                position: 'relative',
-                background: brand.colors.sand,
-                borderRadius: 6,
-                padding: '18px 22px 18px 30px',
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  left: 0,
-                  top: 0,
-                  bottom: 0,
-                  width: 4,
-                  background: brand.colors.amber,
-                  borderTopLeftRadius: 6,
-                  borderBottomLeftRadius: 6,
-                }}
-              />
+            <DataCard key={r.sponsor} accentColor={brand.colors.amber}>
               <div style={{ color: brand.colors.darkGreen, fontSize: 18, fontWeight: 600 }}>{r.sponsor}</div>
               <div style={{ color: brand.colors.amber, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', marginTop: 4, fontWeight: 600 }}>
                 {r.kpi}
@@ -89,7 +70,7 @@ export default function Slide21SponsorRevenue() {
                 {r.tier}
               </div>
               <div style={{ color: brand.colors.bodyText, fontSize: 14, marginTop: 6, lineHeight: 1.5 }}>{r.angle}</div>
-            </div>
+            </DataCard>
           ))}
         </div>
 

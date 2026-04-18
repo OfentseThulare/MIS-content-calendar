@@ -1,5 +1,6 @@
 import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
+import DataCard from '../components/DataCard'
 
 const calendar: Array<{ day: string; post: string; type: string }> = [
   { day: 'Monday', post: 'Fireside recap clip (60 sec vertical), LinkedIn and YouTube Shorts', type: 'Organic' },
@@ -23,24 +24,7 @@ export default function Slide22DigitalSocial() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, maxWidth: '100%', flex: 1, minHeight: 0 }}>
-          <div
-            style={{
-              background: brand.colors.sand,
-              borderRadius: 6,
-              padding: 32,
-              position: 'relative',
-            }}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                left: 0,
-                top: 24,
-                bottom: 24,
-                width: 4,
-                background: brand.colors.gold,
-              }}
-            />
+          <DataCard>
             <div style={{ color: brand.colors.amber, fontSize: 12, letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
               LinkedIn content calendar
             </div>
@@ -56,7 +40,7 @@ export default function Slide22DigitalSocial() {
             <div style={{ marginTop: 24, color: brand.colors.mutedGreen, fontSize: 12, letterSpacing: '0.16em' }}>
               Source: Master Strategy Part C1 and Part B4
             </div>
-          </div>
+          </DataCard>
 
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
