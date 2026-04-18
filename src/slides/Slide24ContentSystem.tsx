@@ -47,18 +47,20 @@ export default function Slide24ContentSystem() {
             </div>
           </DataCard>
 
-          <img
-            src="/page30-cta.jpg"
-            alt="Sample Fireside Conversation deliverables, six finished pieces"
-            style={{
-              maxWidth: '100%',
-              maxHeight: '100%',
-              width: 'auto',
-              height: 'auto',
-              display: 'block',
-              transform: 'translateY(-5px)',
-            }}
-          />
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
+            <img
+              src="/page30-cta.jpg"
+              alt="Sample Fireside Conversation deliverables, six finished pieces"
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+                width: 'auto',
+                height: 'auto',
+                display: 'block',
+                transform: 'translateY(-5px)',
+              }}
+            />
+          </div>
         </div>
       </div>
     </SlideFrame>

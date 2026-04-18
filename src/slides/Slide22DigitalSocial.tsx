@@ -42,14 +42,14 @@ export default function Slide22DigitalSocial() {
             </div>
           </DataCard>
 
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
             <img
               src="/atlas-logo-hero-v2.png"
               alt="Ethical leadership and inclusive growth in mining, Mining Integration Summit 2026"
               style={{
-                width: 'calc(100% + 4px)',
+                width: '100%',
                 height: 'auto',
-                maxHeight: 'calc(100% + 4px)',
+                maxHeight: '100%',
                 display: 'block',
               }}
             />
