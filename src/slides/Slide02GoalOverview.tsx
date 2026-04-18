@@ -70,7 +70,7 @@ export default function Slide02GoalOverview() {
               margin: 0,
             }}
           >
-            The goal is to fill the room with 500 to 600 qualified delegates across five stakeholder groups, secure six named sponsor commitments by 31 May, and establish MIS as a credible annual institution with MIS 2027 already in market before the 2026 event closes.
+            The goal is to fill the room with 500 to 600 qualified delegates across five stakeholder groups, build and activate the outreach infrastructure that puts SAMCA's sponsorship ambition in front of the right organisations at the right moment, and establish MIS as a credible annual institution with MIS 2027 already in market before the 2026 event closes.
           </p>
           <p
             style={{
