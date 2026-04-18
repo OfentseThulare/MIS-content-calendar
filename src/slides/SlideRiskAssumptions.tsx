@@ -99,8 +99,16 @@ export default function SlideRiskAssumptions() {
             <div style={{ height: 1, background: brand.colors.gold, opacity: 0.4 }} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {assumptions.map((a) => (
-                <div key={a} style={{ display: 'grid', gridTemplateColumns: '16px 1fr', gap: 10, alignItems: 'start' }}>
-                  <div style={{ color: brand.colors.gold, fontWeight: 600, fontSize: 14, paddingTop: 1 }}>\u2014</div>
+                <div key={a} style={{ display: 'grid', gridTemplateColumns: '14px 1fr', gap: 12, alignItems: 'start' }}>
+                  <div
+                    style={{
+                      width: 6,
+                      height: 6,
+                      background: brand.colors.gold,
+                      borderRadius: 1,
+                      marginTop: 8,
+                    }}
+                  />
                   <div style={{ color: brand.colors.sand, fontSize: 14, lineHeight: 1.5 }}>{a}</div>
                 </div>
               ))}
