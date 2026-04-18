@@ -4,7 +4,7 @@ import DataCard from './DataCard'
 
 type SegmentCardProps = {
   title: string
-  badge: string
+  badge?: string
   who: string
   hook: string
   channels: string
@@ -53,21 +53,23 @@ export default function SegmentCard({
 }: SegmentCardProps) {
   return (
     <div style={{ fontFamily: brand.fonts.primary, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <div
-        style={{
-          background: brand.colors.amber,
-          color: brand.colors.lightBg,
-          fontSize: 14,
-          fontWeight: 600,
-          padding: '8px 16px',
-          borderRadius: 4,
-          letterSpacing: '0.02em',
-          marginBottom: 20,
-          textAlign: 'center',
-        }}
-      >
-        {badge}
-      </div>
+      {badge ? (
+        <div
+          style={{
+            background: brand.colors.amber,
+            color: brand.colors.lightBg,
+            fontSize: 14,
+            fontWeight: 600,
+            padding: '8px 16px',
+            borderRadius: 4,
+            letterSpacing: '0.02em',
+            marginBottom: 20,
+            textAlign: 'center',
+          }}
+        >
+          {badge}
+        </div>
+      ) : null}
       <DataCard title={title} centred style={{ width: '100%' }}>
         <div
           style={{

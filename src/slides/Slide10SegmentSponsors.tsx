@@ -6,19 +6,18 @@ export default function Slide10SegmentSponsors() {
   return (
     <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={10} totalPages={39}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
-        <div>
+        <div style={{ textAlign: 'center', marginInline: 'auto', maxWidth: 1400 }}>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
-            Segment 02 of 05
+            Segment 02 of 05 · 6 named targets · 5 sponsorship tiers · up to R9.75m at full sell-out
           </div>
           <h1 style={{ fontSize: 56, fontWeight: 600, color: brand.colors.darkGreen, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
             Sponsors and strategic partners
           </h1>
         </div>
 
-        <div style={{ maxWidth: 1400 }}>
+        <div style={{ maxWidth: 1400, marginInline: 'auto', width: '100%' }}>
           <SegmentCard
             title="Who, hook, and channels"
-            badge="6 named targets. 5 sponsorship tiers. Up to R9.75m at full sell-out."
             who="Marketing directors, sustainability directors, CSR budget holders"
             hook="Chair a pillar, own the year long narrative."
             channels="Named outreach via Clay-powered personalised email and LinkedIn Sales Navigator. Six named accounts: Sibanye-Stillwater, Harmony Gold, NYDA, Impala or Northam, OEM suppliers, Bojanala District Municipality."

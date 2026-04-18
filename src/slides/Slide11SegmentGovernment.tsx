@@ -6,19 +6,18 @@ export default function Slide11SegmentGovernment() {
   return (
     <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={11} totalPages={39}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
-        <div>
+        <div style={{ textAlign: 'center', marginInline: 'auto', maxWidth: 1400 }}>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
-            Segment 03 of 05
+            Segment 03 of 05 · 50 complimentary seats, 8 speaking slots
           </div>
           <h1 style={{ fontSize: 56, fontWeight: 600, color: brand.colors.darkGreen, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
             Government, regulators and policy makers
           </h1>
         </div>
 
-        <div style={{ maxWidth: 1400 }}>
+        <div style={{ maxWidth: 1400, marginInline: 'auto', width: '100%' }}>
           <SegmentCard
             title="Who, hook, and channels"
-            badge="50 complimentary seats, 8 speaking slots"
             who="Premier of North West Province, MECs for Economic Development and Education, DMRE, Bojanala Platinum District Municipality, local municipal officials (Rustenburg, Moses Kotane, Madibeng)"
             hook="The platform where policy meets the people it serves."
             channels="Named outreach through SAMCA government liaison, curated email briefs, DG level invitations"

@@ -6,19 +6,18 @@ export default function Slide09SegmentExecs() {
   return (
     <SlideFrame bg={brand.colors.lightBg} textColor={brand.colors.bodyText} showChrome pageNumber={9} totalPages={39}>
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: 32 }}>
-        <div>
+        <div style={{ textAlign: 'center', marginInline: 'auto', maxWidth: 1400 }}>
           <div style={{ fontSize: 13, fontWeight: 500, letterSpacing: '0.22em', color: brand.colors.amber, textTransform: 'uppercase' }}>
-            Segment 01 of 05
+            Segment 01 of 05 · 250 executive and ESG delegates, by invitation
           </div>
           <h1 style={{ fontSize: 56, fontWeight: 600, color: brand.colors.darkGreen, margin: '12px 0 0 0', letterSpacing: '-0.01em' }}>
             Mining executives and ESG leads
           </h1>
         </div>
 
-        <div style={{ maxWidth: 1400 }}>
+        <div style={{ maxWidth: 1400, marginInline: 'auto', width: '100%' }}>
           <SegmentCard
             title="Who, hook, and channels"
-            badge="250 executive and ESG delegates, by invitation"
             who="CEOs, COOs, Heads of Sustainability at mid and large cap mining houses"
             hook="The one room where mining houses, communities, and schools are publicly accountable to each other."
             channels="LinkedIn Sales Navigator, LinkedIn Sponsored Content, personalised email, executive WhatsApp concierge desk, invite-only Fireside Conversation series"
