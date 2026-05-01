@@ -1,5 +1,6 @@
 import { brand } from '../../lib/brand'
 import { phases, phaseOrder, type PhaseKey } from '../../data/phases'
+import { useCompact } from './useCompact'
 
 const accentByPhase: Record<PhaseKey, string> = {
   awareness: brand.colors.gold,
@@ -8,14 +9,16 @@ const accentByPhase: Record<PhaseKey, string> = {
 }
 
 export default function PhaseNavigator() {
+  const compact = useCompact()
+
   return (
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: 16,
+        gridTemplateColumns: compact ? '1fr' : 'repeat(3, 1fr)',
+        gap: compact ? 8 : 16,
         background: `${brand.colors.sand}55`,
-        padding: 16,
+        padding: compact ? 12 : 16,
         borderRadius: 8,
       }}
     >
@@ -29,7 +32,7 @@ export default function PhaseNavigator() {
               display: 'flex',
               flexDirection: 'column',
               gap: 6,
-              padding: '14px 18px',
+              padding: compact ? '12px 14px' : '14px 18px',
               background: brand.colors.lightBg,
               borderRadius: 6,
               borderLeft: `3px solid ${accent}`,

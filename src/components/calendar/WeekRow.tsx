@@ -3,6 +3,7 @@ import { brand } from '../../lib/brand'
 import { phases, type PhaseKey } from '../../data/phases'
 import type { CalendarDay, CalendarPost } from '../../data/calendar'
 import CalendarCard from './CalendarCard'
+import { useCompact } from './useCompact'
 
 type Props = {
   weekNumber: number
@@ -15,6 +16,7 @@ type Props = {
 const dayOrder: CalendarDay[] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
 
 export default function WeekRow({ weekNumber, phase, posts, onSelectPost, style }: Props) {
+  const compact = useCompact()
   const phaseDef = phases[phase]
   const dateRange = posts.length
     ? `${shortDate(posts[0].date)} to ${shortDate(posts[posts.length - 1].date)}`
@@ -23,9 +25,80 @@ export default function WeekRow({ weekNumber, phase, posts, onSelectPost, style 
   const byDay = new Map<CalendarDay, CalendarPost>()
   for (const post of posts) byDay.set(post.day, post)
 
+  const id = `week-${weekNumber}`
+
+  if (compact) {
+    return (
+      <section
+        id={id}
+        data-week-row
+        aria-labelledby={`${id}-label`}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 12,
+          padding: '14px 16px 18px',
+          background: `${brand.colors.lightBg}`,
+          border: `1px solid ${brand.colors.sand}66`,
+          borderRadius: 8,
+          ...style,
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12 }}>
+          <div id={`${id}-label`} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div
+              style={{
+                color: brand.colors.mutedGreen,
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {`Week ${weekNumber}`}
+            </div>
+            <div style={{ color: brand.colors.darkGreen, fontSize: 13, fontWeight: 500 }}>{dateRange}</div>
+          </div>
+          <div
+            style={{
+              color: phaseAccent(phase),
+              fontSize: 10,
+              fontWeight: 700,
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+            }}
+          >
+            {phaseDef.label}
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {posts.length === 0 ? (
+            <div
+              style={{
+                padding: '14px 12px',
+                border: `1px dashed ${brand.colors.sand}`,
+                borderRadius: 6,
+                color: brand.colors.mutedGreen,
+                fontSize: 12,
+                textAlign: 'center',
+              }}
+            >
+              No posts scheduled this week
+            </div>
+          ) : (
+            posts.map((post) => <CalendarCard key={post.id} post={post} onSelect={onSelectPost} />)
+          )}
+        </div>
+      </section>
+    )
+  }
+
   return (
-    <div
+    <section
+      id={id}
       data-week-row
+      aria-labelledby={`${id}-label`}
       style={{
         display: 'grid',
         gridTemplateColumns: '120px repeat(5, 1fr)',
@@ -35,6 +108,7 @@ export default function WeekRow({ weekNumber, phase, posts, onSelectPost, style 
       }}
     >
       <div
+        id={`${id}-label`}
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -105,7 +179,7 @@ export default function WeekRow({ weekNumber, phase, posts, onSelectPost, style 
         }
         return <CalendarCard key={post.id} post={post} onSelect={onSelectPost} />
       })}
-    </div>
+    </section>
   )
 }
 

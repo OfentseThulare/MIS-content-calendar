@@ -1,0 +1,51 @@
+/* Calendar route global styles. Kept tiny on purpose; component styling
+   stays inline with brand tokens. This file only owns concerns that JSX
+   inline styles cannot express cleanly: pseudo-selectors and screen-reader
+   utilities. */
+
+[data-focus-ring]:focus-visible,
+.atlas-focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px #264527, 0 0 0 5px #E2BB39 !important;
+  outline: none !important;
+}
+
+.atlas-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.atlas-skip-link:focus {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: auto;
+  height: auto;
+  padding: 12px 18px;
+  background: #264527;
+  color: #E2BB39;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  z-index: 1000;
+  box-shadow: 0 0 0 3px #E2BB39;
+}
+
+.atlas-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

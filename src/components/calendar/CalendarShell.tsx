@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { brand } from '../../lib/brand'
+import { CompactContext, useCompactValue } from './useCompact'
 
 const CANVAS_WIDTH = 1920
 const SAFE_BUFFER = 24
@@ -8,18 +9,20 @@ type Props = {
   children: ReactNode
 }
 
-// CalendarShell scales a fixed-width canvas to fit the viewport while letting the
-// page itself flow vertically. Scroll progress is rendered as a gold rule at top.
 function computeScale(): number {
   if (typeof window === 'undefined') return 1
   return Math.min(1, (window.innerWidth - 2 * SAFE_BUFFER) / CANVAS_WIDTH)
 }
 
+// CalendarShell scales a fixed-width canvas to fit the viewport on desktop
+// (>=1024px) and renders a fluid stacked layout below that threshold.
+// Scroll progress is rendered as a gold rule at top.
 export default function CalendarShell({ children }: Props) {
   const [scale, setScale] = useState<number>(() => computeScale())
   const [progress, setProgress] = useState(0)
   const [canvasHeight, setCanvasHeight] = useState<number | null>(null)
   const canvasRef = useRef<HTMLDivElement>(null)
+  const compact = useCompactValue()
 
   useLayoutEffect(() => {
     let raf = 0
@@ -39,8 +42,7 @@ export default function CalendarShell({ children }: Props) {
     if (!node) return
     const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
-        const height = entry.contentRect.height
-        setCanvasHeight(height)
+        setCanvasHeight(entry.contentRect.height)
       }
     })
     observer.observe(node)
@@ -72,78 +74,95 @@ export default function CalendarShell({ children }: Props) {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  const wrapperHeight = canvasHeight !== null ? `${canvasHeight * scale}px` : 'auto'
+  const wrapperHeight = !compact && canvasHeight !== null ? `${canvasHeight * scale}px` : 'auto'
 
   return (
-    <div
-      style={{
-        background: brand.colors.lightBg,
-        fontFamily: brand.fonts.primary,
-        color: brand.colors.bodyText,
-        minHeight: '100vh',
-        position: 'relative',
-      }}
-    >
-      <div
-        data-scroll-progress
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: 3,
-          background: `${brand.colors.darkGreen}33`,
-          zIndex: 50,
-        }}
-      >
-        <div
-          style={{
-            width: `${progress}%`,
-            height: '100%',
-            background: brand.colors.gold,
-            transition: 'width 200ms cubic-bezier(0.22, 1, 0.36, 1)',
-          }}
-        />
-      </div>
-
-      {/* Subtle grain overlay applied via Gate D (atlas-web-enhancer). */}
-      <div
-        data-grain
-        aria-hidden
-        style={{
-          position: 'fixed',
-          inset: 0,
-          pointerEvents: 'none',
-          opacity: 0.025,
-          mixBlendMode: 'multiply',
-          backgroundImage:
-            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='1'/></svg>\")",
-          zIndex: 1,
-        }}
-      />
-
+    <CompactContext.Provider value={compact}>
       <div
         style={{
-          width: `${CANVAS_WIDTH * scale}px`,
-          margin: '0 auto',
-          paddingTop: SAFE_BUFFER,
-          paddingBottom: SAFE_BUFFER,
-          height: wrapperHeight,
+          background: brand.colors.lightBg,
+          fontFamily: brand.fonts.primary,
+          color: brand.colors.bodyText,
+          minHeight: '100vh',
           position: 'relative',
-          zIndex: 2,
         }}
       >
         <div
-          ref={canvasRef}
+          data-scroll-progress
           style={{
-            width: CANVAS_WIDTH,
-            transform: `scale(${scale})`,
-            transformOrigin: 'top left',
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 3,
+            background: `${brand.colors.darkGreen}33`,
+            zIndex: 50,
           }}
         >
-          {children}
+          <div
+            style={{
+              width: `${progress}%`,
+              height: '100%',
+              background: brand.colors.gold,
+              transition: 'width 200ms cubic-bezier(0.22, 1, 0.36, 1)',
+            }}
+          />
         </div>
+
+        <div
+          data-grain
+          aria-hidden
+          style={{
+            position: 'fixed',
+            inset: 0,
+            pointerEvents: 'none',
+            opacity: 0.025,
+            mixBlendMode: 'multiply',
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='1'/></svg>\")",
+            zIndex: 1,
+          }}
+        />
+
+        {compact ? (
+          <div
+            style={{
+              width: '100%',
+              maxWidth: 720,
+              margin: '0 auto',
+              paddingTop: SAFE_BUFFER,
+              paddingBottom: SAFE_BUFFER,
+              position: 'relative',
+              zIndex: 2,
+            }}
+          >
+            {children}
+          </div>
+        ) : (
+          <div
+            style={{
+              width: `${CANVAS_WIDTH * scale}px`,
+              margin: '0 auto',
+              paddingTop: SAFE_BUFFER,
+              paddingBottom: SAFE_BUFFER,
+              height: wrapperHeight,
+              position: 'relative',
+              zIndex: 2,
+            }}
+          >
+            <div
+              ref={canvasRef}
+              style={{
+                width: CANVAS_WIDTH,
+                transform: `scale(${scale})`,
+                transformOrigin: 'top left',
+              }}
+            >
+              {children}
+            </div>
+          </div>
+        )}
       </div>
-    </div>
+    </CompactContext.Provider>
   )
 }

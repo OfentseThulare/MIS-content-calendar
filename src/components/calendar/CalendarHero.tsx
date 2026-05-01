@@ -1,16 +1,19 @@
 import { brand } from '../../lib/brand'
 import NumberTicker from '../NumberTicker'
 import { calendarStats } from '../../data/calendar'
+import { useCompact } from './useCompact'
 
 export default function CalendarHero() {
+  const compact = useCompact()
+
   return (
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: '1.6fr 1fr',
-        alignItems: 'center',
-        gap: 48,
-        padding: '40px 0 32px',
+        gridTemplateColumns: compact ? '1fr' : '1.6fr 1fr',
+        alignItems: compact ? 'stretch' : 'center',
+        gap: compact ? 24 : 48,
+        padding: compact ? '24px 0 16px' : '40px 0 32px',
       }}
     >
       <div>
@@ -29,7 +32,7 @@ export default function CalendarHero() {
           style={{
             margin: '14px 0 16px',
             color: brand.colors.darkGreen,
-            fontSize: 56,
+            fontSize: compact ? 32 : 56,
             fontWeight: 600,
             letterSpacing: '-0.01em',
             lineHeight: 1.05,
@@ -40,7 +43,7 @@ export default function CalendarHero() {
         <div
           style={{
             color: brand.colors.bodyText,
-            fontSize: 18,
+            fontSize: compact ? 16 : 18,
             lineHeight: 1.55,
             maxWidth: 640,
           }}
@@ -50,12 +53,13 @@ export default function CalendarHero() {
 
         <a
           data-magnetic
+          data-focus-ring
           href="#calendar-grid"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: 10,
-            marginTop: 28,
+            marginTop: 24,
             padding: '14px 22px',
             background: brand.colors.darkGreen,
             color: brand.colors.gold,
@@ -77,16 +81,17 @@ export default function CalendarHero() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 14,
+          gridTemplateColumns: compact ? 'repeat(3, 1fr)' : 'repeat(3, 1fr)',
+          gap: compact ? 8 : 14,
         }}
       >
-        <KpiTile label="Posts planned" value={calendarStats.totalPosts} accent={brand.colors.gold} />
+        <KpiTile label="Posts planned" value={calendarStats.totalPosts} accent={brand.colors.gold} compact={compact} />
         <KpiTile
           label="Paid spend, ZAR"
           value={calendarStats.paidSpendZAR}
           accent={brand.colors.darkBrown}
           formatter={(n) => `R${(n / 1000).toFixed(0)}k`}
+          compact={compact}
         />
         <KpiTile
           label="Engagement target"
@@ -94,6 +99,7 @@ export default function CalendarHero() {
           accent={brand.colors.sage}
           suffix="%"
           prefix={`${calendarStats.engagementRateLow} to `}
+          compact={compact}
         />
       </div>
     </div>
@@ -107,6 +113,7 @@ function KpiTile({
   suffix,
   prefix,
   formatter,
+  compact,
 }: {
   label: string
   value: number
@@ -114,13 +121,14 @@ function KpiTile({
   suffix?: string
   prefix?: string
   formatter?: (n: number) => string
+  compact: boolean
 }) {
   return (
     <div
       style={{
         background: brand.colors.darkGreen,
         color: brand.colors.lightBg,
-        padding: '20px 18px',
+        padding: compact ? '14px 12px' : '20px 18px',
         borderRadius: 8,
         position: 'relative',
         overflow: 'hidden',
@@ -140,11 +148,11 @@ function KpiTile({
       <div
         style={{
           color: accent,
-          fontSize: 11,
+          fontSize: compact ? 9 : 11,
           fontWeight: 600,
-          letterSpacing: '0.22em',
+          letterSpacing: '0.18em',
           textTransform: 'uppercase',
-          marginBottom: 10,
+          marginBottom: compact ? 6 : 10,
         }}
       >
         {label}
@@ -152,31 +160,20 @@ function KpiTile({
       <div
         style={{
           color: brand.colors.gold,
-          fontSize: 36,
+          fontSize: compact ? 22 : 36,
           fontWeight: 600,
           letterSpacing: '-0.01em',
           lineHeight: 1,
           fontVariantNumeric: 'tabular-nums',
         }}
       >
-        {prefix ? <span style={{ color: brand.colors.lightBg, fontSize: 22, fontWeight: 500 }}>{prefix}</span> : null}
+        {prefix ? <span style={{ color: brand.colors.lightBg, fontSize: compact ? 13 : 22, fontWeight: 500 }}>{prefix}</span> : null}
         {formatter ? (
-          <FormattedTicker value={value} formatter={formatter} />
+          <span>{formatter(value)}</span>
         ) : (
           <NumberTicker value={value} suffix={suffix ?? ''} />
         )}
       </div>
     </div>
-  )
-}
-
-function FormattedTicker({ value, formatter }: { value: number; formatter: (n: number) => string }) {
-  // Spring through to value, formatted at the wrapper level for currency display.
-  return (
-    <span>
-      {/* Direct rendering: NumberTicker animates a raw number; for ZAR currency we display the static formatted value
-          to avoid animating "k" suffix oddly. The spring effect still fires on adjacent tiles. */}
-      {formatter(value)}
-    </span>
   )
 }

@@ -83,6 +83,7 @@ export default function PostDetailModal({ post, onClose }: Props) {
           type="button"
           onClick={onClose}
           aria-label="Close post detail"
+          className="atlas-focus-ring"
           style={{
             position: 'absolute',
             top: 16,
@@ -97,6 +98,7 @@ export default function PostDetailModal({ post, onClose }: Props) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            outline: 'none',
           }}
         >
           ✕
