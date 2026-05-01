@@ -409,8 +409,8 @@ export const posts: Record<string, PostCopy> = {
 
   P51: {
     id: 'P51',
-    hook: '10 days to Sun City. The last paid push is live.',
-    body: 'Today is 10 days from the opening keynote.\n\n420 delegate registrations on the books. 80 registrations to the lower bound of the target. Registration closes at midnight on 15 July.\n\nThe full LinkedIn ad budget is now on conversion. Anyone who has been touched by the outreach sequence and has not registered will see this post on their feed three times in the next five days.\n\nNo more reveals. Just the last call.',
+    hook: '10 days to Sun City. The last call begins.',
+    body: 'Today is 10 days from the opening keynote.\n\n420 delegate registrations on the books. 80 registrations to the lower bound of the target. Registration closes at midnight on 15 July.\n\nIf you have been waiting for a sign, this is it. The lineup is set. The agenda is locked. The room is filling.\n\nNo more reveals. Just the last call.',
     cta: 'Register before the close at midnight on 15 July.',
     hashtags: ['#MIS2026', '#Countdown', '#LastCall'],
   },

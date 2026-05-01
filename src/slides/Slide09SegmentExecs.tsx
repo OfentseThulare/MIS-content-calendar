@@ -20,7 +20,7 @@ export default function Slide09SegmentExecs() {
             title="Who, hook, and channels"
             who="CEOs, COOs, Heads of Sustainability at mid and large cap mining houses"
             hook="The one room where mining houses, communities, and schools are publicly accountable to each other."
-            channels="LinkedIn Sales Navigator, LinkedIn Sponsored Content, personalised email, executive WhatsApp concierge desk, invite-only Fireside Conversation series"
+            channels="LinkedIn organic content, personalised email, executive WhatsApp concierge desk, invite-only Fireside Conversation series"
             proof="Logos of first three confirmed sponsors, named SAMCA board members, named government speaker"
           />
         </div>

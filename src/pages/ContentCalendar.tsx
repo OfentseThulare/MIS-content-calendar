@@ -9,7 +9,7 @@ import WeekRow from '../components/calendar/WeekRow'
 import PhaseDivider from '../components/calendar/PhaseDivider'
 import PostDetailModal from '../components/calendar/PostDetailModal'
 import CalendarFilters from '../components/calendar/CalendarFilters'
-import { defaultFilters, type FilterState, type PaidFilter } from '../components/calendar/filterTypes'
+import { defaultFilters, type FilterState } from '../components/calendar/filterTypes'
 import { calendar, calendarByWeek, type CalendarPost } from '../data/calendar'
 import { phases } from '../data/phases'
 import type { PillarKey } from '../data/pillars'
@@ -208,8 +208,6 @@ function Footer() {
 function matches(post: CalendarPost, filters: FilterState): boolean {
   if (filters.phase !== 'all' && post.phase !== filters.phase) return false
   if (filters.pillar !== 'all' && post.pillar !== filters.pillar) return false
-  if (filters.paid === 'paid' && !post.isPaid) return false
-  if (filters.paid === 'organic' && post.isPaid) return false
   return true
 }
 
@@ -220,7 +218,6 @@ function readHashFilters(): FilterState {
   const params = new URLSearchParams(hash)
   const phase = params.get('phase')
   const pillar = params.get('pillar')
-  const paid = params.get('paid')
   const validPhase: FilterState['phase'] =
     phase === 'awareness' || phase === 'speakers' || phase === 'programme' ? (phase as PhaseKey) : 'all'
   const validPillar: FilterState['pillar'] =
@@ -231,8 +228,7 @@ function readHashFilters(): FilterState {
     pillar === 'investment-attraction'
       ? (pillar as PillarKey)
       : 'all'
-  const validPaid: PaidFilter = paid === 'paid' || paid === 'organic' ? paid : 'all'
-  return { phase: validPhase, pillar: validPillar, paid: validPaid }
+  return { phase: validPhase, pillar: validPillar }
 }
 
 function writeHashFilters(filters: FilterState): void {
@@ -240,7 +236,6 @@ function writeHashFilters(filters: FilterState): void {
   const params = new URLSearchParams()
   if (filters.phase !== 'all') params.set('phase', filters.phase)
   if (filters.pillar !== 'all') params.set('pillar', filters.pillar)
-  if (filters.paid !== 'all') params.set('paid', filters.paid)
   const next = params.toString()
   const url = next ? `#${next}` : window.location.pathname + window.location.search
   if (next) {

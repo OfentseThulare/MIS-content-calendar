@@ -18,8 +18,6 @@ import Slide12SegmentCommunities from '../slides/Slide12SegmentCommunities'
 import Slide13SegmentAcademia from '../slides/Slide13SegmentAcademia'
 import Slide14ChannelsDivider from '../slides/Slide14ChannelsDivider'
 import Slide15PlatformMap from '../slides/Slide15PlatformMap'
-import Slide16PaidMediaSplit from '../slides/Slide16PaidMediaSplit'
-import Slide17OrganicVsPaid from '../slides/Slide17OrganicVsPaid'
 import Slide18CampaignArc from '../slides/Slide18CampaignArc'
 import Slide19Insight from '../slides/Slide19Insight'
 import SlideLearningPyramid from '../slides/SlideLearningPyramid'
@@ -83,32 +81,30 @@ export const slides: Slide[] = [
   // Channels
   { id: 'slide-18', component: Slide14ChannelsDivider, section: 'Channels' },
   { id: 'slide-19', component: Slide15PlatformMap, section: 'Channels' },
-  { id: 'slide-20', component: Slide16PaidMediaSplit, section: 'Channels' },
-  { id: 'slide-21', component: Slide17OrganicVsPaid, section: 'Channels' },
-  { id: 'slide-22', component: Slide18CampaignArc, section: 'Channels' },
+  { id: 'slide-20', component: Slide18CampaignArc, section: 'Channels' },
 
   // Idea
-  { id: 'slide-23', component: Slide19Insight, section: 'Idea' },
-  { id: 'slide-24', component: SlideLearningPyramid, section: 'Idea' },
-  { id: 'slide-25', component: SlideSectorLearnings, section: 'Idea' },
-  { id: 'slide-26', component: Slide20BigIdea, section: 'Idea' },
+  { id: 'slide-21', component: Slide19Insight, section: 'Idea' },
+  { id: 'slide-22', component: SlideLearningPyramid, section: 'Idea' },
+  { id: 'slide-23', component: SlideSectorLearnings, section: 'Idea' },
+  { id: 'slide-24', component: Slide20BigIdea, section: 'Idea' },
 
   // Expression
-  { id: 'slide-27', component: SlideCreativeTreatment, section: 'Expression' },
-  { id: 'slide-28', component: Slide22DigitalSocial, sparklineBeat: 6, section: 'Expression' },
-  { id: 'slide-29', component: Slide23EmailWhatsApp, sparklineBeat: 7, section: 'Expression' },
-  { id: 'slide-30', component: Slide24ContentSystem, sparklineBeat: 8, section: 'Expression' },
+  { id: 'slide-25', component: SlideCreativeTreatment, section: 'Expression' },
+  { id: 'slide-26', component: Slide22DigitalSocial, sparklineBeat: 6, section: 'Expression' },
+  { id: 'slide-27', component: Slide23EmailWhatsApp, sparklineBeat: 7, section: 'Expression' },
+  { id: 'slide-28', component: Slide24ContentSystem, sparklineBeat: 8, section: 'Expression' },
 
   // Substance
-  { id: 'slide-31', component: Slide25Funnel, section: 'Substance' },
-  { id: 'slide-32', component: Slide26FullBudget, section: 'Substance' },
-  { id: 'slide-33', component: Slide26bROI, section: 'Substance' },
-  { id: 'slide-34', component: Slide27WeeklyReport, section: 'Substance' },
-  { id: 'slide-35', component: SlideRolloutSpeakers, section: 'Substance' },
+  { id: 'slide-29', component: Slide25Funnel, section: 'Substance' },
+  { id: 'slide-30', component: Slide26FullBudget, section: 'Substance' },
+  { id: 'slide-31', component: Slide26bROI, section: 'Substance' },
+  { id: 'slide-32', component: Slide27WeeklyReport, section: 'Substance' },
+  { id: 'slide-33', component: SlideRolloutSpeakers, section: 'Substance' },
 
   // Close
-  { id: 'slide-36', component: SlideRolloutProgramme, section: 'Close' },
-  { id: 'slide-37', component: Slide28Timeline, sparklineBeat: 9, section: 'Close' },
-  { id: 'slide-38', component: SlideRiskAssumptions, section: 'Close' },
-  { id: 'slide-39', component: Slide30CallToAction, sparklineBeat: 10, section: 'Close' },
+  { id: 'slide-34', component: SlideRolloutProgramme, section: 'Close' },
+  { id: 'slide-35', component: Slide28Timeline, sparklineBeat: 9, section: 'Close' },
+  { id: 'slide-36', component: SlideRiskAssumptions, section: 'Close' },
+  { id: 'slide-37', component: Slide30CallToAction, sparklineBeat: 10, section: 'Close' },
 ]

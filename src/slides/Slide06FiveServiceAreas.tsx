@@ -10,7 +10,7 @@ const areas: Array<{ n: string; title: string; body: string }> = [
   {
     n: '02',
     title: 'A brand presence that builds belief',
-    body: 'Organic social across LinkedIn, Facebook, Instagram, TikTok, YouTube, and WhatsApp. Paid campaigns across LinkedIn, Meta, Google, and TikTok. Speaker announcements, government endorsements, and sponsor reveals on a structured weekly calendar.',
+    body: 'Organic content across LinkedIn, Facebook, Instagram, TikTok, YouTube, and WhatsApp. Speaker announcements, government endorsements, and sponsor reveals on a structured weekly calendar. Reach driven entirely by SAMCA board, sponsor, and partner amplification.',
   },
   {
     n: '03',

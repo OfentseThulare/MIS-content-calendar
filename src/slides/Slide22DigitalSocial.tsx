@@ -5,9 +5,9 @@ import DataCard from '../components/DataCard'
 const calendar: Array<{ day: string; post: string; type: string }> = [
   { day: 'Monday', post: 'Fireside recap clip (60 sec vertical), LinkedIn and YouTube Shorts', type: 'Organic' },
   { day: 'Tuesday', post: 'Pillar thought leadership post, Lee or SAMCA board member personal page', type: 'Organic' },
-  { day: 'Wednesday', post: 'Sponsor or speaker announcement carousel', type: 'Organic plus Paid boost' },
+  { day: 'Wednesday', post: 'Sponsor or speaker announcement carousel', type: 'Organic' },
   { day: 'Thursday', post: 'Fireside Conversation live session (7pm to 9pm)', type: 'Organic' },
-  { day: 'Friday', post: 'Week recap with registration CTA, LinkedIn sponsored', type: 'Paid' },
+  { day: 'Friday', post: 'Week recap with registration CTA', type: 'Organic' },
 ]
 
 export default function Slide22DigitalSocial() {
