@@ -105,10 +105,19 @@ export function useEnhancer() {
     }
     window.addEventListener('resize', onResize)
 
+    // Pause Lenis while a modal is open so wheel/touch events fall through to
+    // the modal's native overflow:auto scrolling, then resume on close.
+    const handleModalOpen = () => lenis.stop()
+    const handleModalClose = () => lenis.start()
+    window.addEventListener('atlas:modal-open', handleModalOpen)
+    window.addEventListener('atlas:modal-close', handleModalClose)
+
     return () => {
       cancelAnimationFrame(raf)
       cancelAnimationFrame(resizeRaf)
       window.removeEventListener('resize', onResize)
+      window.removeEventListener('atlas:modal-open', handleModalOpen)
+      window.removeEventListener('atlas:modal-close', handleModalClose)
       lenis.destroy()
       rowTriggers.forEach((t) => t.kill())
       ruleTriggers.forEach((t) => t.kill())
