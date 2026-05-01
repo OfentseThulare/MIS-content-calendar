@@ -11,9 +11,9 @@ type Phase = {
 }
 
 const phases: Phase[] = [
-  { name: 'Build the case', weeks: 'W1 to 6, 20 Apr to 31 May', theme: 'Why this summit matters now, who is already in', outcome: 'Sponsors closed, 200 registrations, warm list of 2,500', budget: 'R165k, 30%' },
+  { name: 'Build the case', weeks: 'W1 to 6, 20 Apr to 31 May (paid live from 15 May)', theme: 'Why this summit matters now, who is already in', outcome: 'Sponsors closed, 200 registrations, warm list of 2,500', budget: 'R65k, 12%' },
   { name: 'Prove substance', weeks: 'W7 to 12, 1 Jun to 12 Jul', theme: 'What you get for three days on the ground', outcome: 'Agenda live, 450 registrations', budget: 'R220k, 40%' },
-  { name: 'Final push and amplify', weeks: 'W13 to 18, 13 Jul to 27 Aug', theme: 'Do not miss the table, then amplify the outcomes', outcome: '550 delegates, post-event reach through August', budget: 'R165k, 30%' },
+  { name: 'Final push and amplify', weeks: 'W13 to 18, 13 Jul to 27 Aug', theme: 'Do not miss the table, then amplify the outcomes', outcome: '550 delegates, post-event reach through August', budget: 'R265k, 48%' },
 ]
 
 const curveData = [
