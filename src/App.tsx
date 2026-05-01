@@ -4,6 +4,13 @@ import { brand } from './lib/brand'
 
 const ContentCalendar = lazy(() => import('./pages/ContentCalendar'))
 
+// On the calendar host (mis-content-calendar.*), the calendar is the home page
+// and the deck lives at /deck. On other hosts, the deck stays at /.
+function isCalendarHost(): boolean {
+  if (typeof window === 'undefined') return false
+  return /content-calendar|^calendar\./i.test(window.location.hostname)
+}
+
 function App() {
   const [path, setPath] = useState<string>(() =>
     typeof window !== 'undefined' ? window.location.pathname : '/',
@@ -15,7 +22,10 @@ function App() {
     return () => window.removeEventListener('popstate', onPopState)
   }, [])
 
-  if (path.startsWith('/calendar')) {
+  const calendarHost = isCalendarHost()
+  const showCalendar = path.startsWith('/calendar') || (calendarHost && !path.startsWith('/deck'))
+
+  if (showCalendar) {
     return (
       <RouteErrorBoundary>
         <Suspense fallback={<RouteFallback />}>
