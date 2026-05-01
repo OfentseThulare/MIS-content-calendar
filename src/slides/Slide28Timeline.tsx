@@ -2,7 +2,7 @@ import { brand } from '../lib/brand'
 import SlideFrame from '../components/SlideFrame'
 
 const phases: Array<{ period: string; phase: string; milestone: string }> = [
-  { period: '20 Apr to 31 May', phase: 'Foundation and sponsor close', milestone: 'Paid media live, all six sponsor commitments confirmed' },
+  { period: '20 Apr to 31 May', phase: 'Foundation and sponsor close', milestone: 'Paid media live from 15 May, all six sponsor commitments confirmed' },
   { period: '1 Jun to 12 Jul', phase: 'Conversion window', milestone: 'Registrations open, 450 delegates by 12 July' },
   { period: '13 to 19 Jul', phase: 'Final push', milestone: 'Sold out messaging, logistics confirmed, 550 delegates' },
   { period: '20 to 22 Jul', phase: 'Event live', milestone: 'Three days, three programmes' },

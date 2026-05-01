@@ -87,9 +87,10 @@ export default function CalendarHero() {
       >
         <KpiTile label="Posts planned" value={calendarStats.totalPosts} accent={brand.colors.gold} compact={compact} />
         <KpiTile
-          label="Fireside conversations"
-          value={calendarStats.firesideConversations}
+          label="Paid spend, ZAR"
+          value={calendarStats.paidSpendZAR}
           accent={brand.colors.darkBrown}
+          formatter={(n) => `R${(n / 1000).toFixed(0)}k`}
           compact={compact}
         />
         <KpiTile

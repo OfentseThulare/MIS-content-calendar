@@ -232,12 +232,10 @@ export default function PostDetailModal({ post, onClose }: Props) {
             <span>{`${dayName(post.day)}, ${formattedDate(post.date)}`}</span>
             <span>·</span>
             <span>{formatLabel[post.format]}</span>
-            {post.notes ? (
-              <>
-                <span>·</span>
-                <span style={{ color: brand.colors.mutedGreen, fontWeight: 600 }}>{post.notes}</span>
-              </>
-            ) : null}
+            <span>·</span>
+            <span style={{ color: post.isPaid ? brand.colors.darkBrown : brand.colors.mutedGreen, fontWeight: 600 }}>
+              {post.isPaid ? `Paid${post.paidNotes ? ` · ${post.paidNotes}` : ''}` : 'Organic'}
+            </span>
           </div>
 
           {draft ? (

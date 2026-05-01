@@ -27,7 +27,9 @@ export default function CalendarCard({ post, onSelect }: Props) {
   const [hover, setHover] = useState(false)
   const [focusRing, setFocusRing] = useState(false)
   const titleRef = useRef<HTMLDivElement>(null)
-  const ariaLabel = `${post.id}, ${dayName(post.day)} ${formattedDate(post.date)}, ${post.title}, ${pillar.label} pillar`
+  const ariaLabel = `${post.id}, ${dayName(post.day)} ${formattedDate(post.date)}, ${post.title}, ${pillar.label} pillar${
+    post.isPaid ? ', paid' : ', organic'
+  }`
   const formatText = formatLabel[post.format]
   const formatHint = formatGlossary[formatText] ?? formatText
 
@@ -49,7 +51,7 @@ export default function CalendarCard({ post, onSelect }: Props) {
       aria-label={ariaLabel}
       style={{
         position: 'relative',
-        background: brand.colors.lightBg,
+        background: post.isPaid ? brand.colors.sand : brand.colors.lightBg,
         height: compact ? 'auto' : 140,
         minHeight: compact ? 120 : 140,
         borderRadius: 6,
@@ -146,7 +148,9 @@ export default function CalendarCard({ post, onSelect }: Props) {
             bottom: 0,
             height: 16,
             pointerEvents: 'none',
-            background: `linear-gradient(to bottom, transparent, ${brand.colors.lightBg})`,
+            background: `linear-gradient(to bottom, transparent, ${
+              post.isPaid ? brand.colors.sand : brand.colors.lightBg
+            })`,
             opacity: 0.6,
           }}
         />
@@ -156,8 +160,8 @@ export default function CalendarCard({ post, onSelect }: Props) {
         <span
           title={formatHint}
           style={{
-            background: brand.colors.darkGreen,
-            color: brand.colors.gold,
+            background: post.isPaid ? brand.colors.darkBrown : brand.colors.darkGreen,
+            color: post.isPaid ? brand.colors.lightBg : brand.colors.gold,
             fontSize: 11,
             fontWeight: 500,
             padding: '3px 8px',
@@ -166,7 +170,7 @@ export default function CalendarCard({ post, onSelect }: Props) {
             cursor: 'help',
           }}
         >
-          {formatText}
+          {post.isPaid ? `Paid · ${formatText}` : formatText}
         </span>
         <span
           style={{

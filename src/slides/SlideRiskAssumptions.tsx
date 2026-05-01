@@ -36,7 +36,7 @@ const assumptions: string[] = [
   'At least one Premier or MEC endorsement confirmed by week 4',
   'Three host community councils sign participation memoranda by week 6',
   'SAMCA retains final editorial sign-off on all outbound communications',
-  'Atlas retainer approved by end of April 2026',
+  'Atlas retainer approved by end of April 2026; client paid media budget approved before 15 May 2026',
 ]
 
 export default function SlideRiskAssumptions() {

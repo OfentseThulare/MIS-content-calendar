@@ -23,7 +23,8 @@ export type CalendarPost = {
   pillar: PillarKey
   format: CalendarFormat
   title: string
-  notes?: string
+  isPaid: boolean
+  paidNotes?: string
   copyId: string
 }
 
@@ -49,7 +50,9 @@ export const calendar: CalendarPost[] = [
     day: 'Fri',
     pillar: 'industry-collaboration',
     format: 'manifesto',
-    title: 'Manifesto launch, pinned to the SAMCA page',
+    title: 'Manifesto launch, 1080 hero, organic',
+    isPaid: false,
+    paidNotes: 'Organic launch. Paid window opens 15 May, first paid post is P14 on 20 May.',
     copyId: 'P01',
   },
 
@@ -63,6 +66,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'carousel',
     title: 'Why this summit, why now',
+    isPaid: false,
     copyId: 'P02',
   },
   {
@@ -74,7 +78,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'long-form-text',
     title: 'The cost of mining without trust',
-    notes: 'Posted from Lee Du Preez personal page',
+    isPaid: false,
+    paidNotes: 'Posted from Lee Du Preez personal page',
     copyId: 'P03',
   },
   {
@@ -86,6 +91,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'announcement-image',
     title: 'Sponsor prospectus is now in market',
+    isPaid: false,
     copyId: 'P04',
   },
   {
@@ -97,6 +103,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'live-event',
     title: 'Fireside 1: Sustainable harmony, what does it actually mean',
+    isPaid: false,
     copyId: 'P05',
   },
   {
@@ -108,6 +115,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: 'Week 2 recap, register your interest',
+    isPaid: false,
+    paidNotes: 'Pre-paid window. Goes out organic.',
     copyId: 'P06',
   },
 
@@ -121,6 +130,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'video-clip',
     title: 'Fireside 1 highlight clip, 60 seconds vertical',
+    isPaid: false,
     copyId: 'P07',
   },
   {
@@ -132,6 +142,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'policy-regulatory-dialogue',
     format: 'long-form-text',
     title: 'What B-BBEE actually unlocks for host communities',
+    isPaid: false,
     copyId: 'P08',
   },
   {
@@ -143,6 +154,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'policy-regulatory-dialogue',
     format: 'announcement-image',
     title: 'Premier letter received, speaker reveals begin',
+    isPaid: false,
+    paidNotes: 'Pre-paid window. Goes out organic.',
     copyId: 'P09',
   },
   {
@@ -154,6 +167,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'live-event',
     title: 'Fireside 2: The Premier mandate, mining and the SEZ pipeline',
+    isPaid: false,
     copyId: 'P10',
   },
   {
@@ -165,6 +179,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'policy-regulatory-dialogue',
     format: 'recap-card',
     title: 'Week 3 recap, the Premier voice on mining integration',
+    isPaid: false,
+    paidNotes: 'Pre-paid window. Goes out organic. Paid campaign opens with P14 on 20 May.',
     copyId: 'P11',
   },
 
@@ -178,6 +194,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'video-clip',
     title: 'Fireside 2 highlight clip',
+    isPaid: false,
     copyId: 'P12',
   },
   {
@@ -189,6 +206,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'long-form-text',
     title: 'Why the next decade of mining is measured in trust',
+    isPaid: false,
     copyId: 'P13',
   },
   {
@@ -200,6 +218,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'policy-regulatory-dialogue',
     format: 'carousel',
     title: 'MEC for Economic Development endorsement reveal',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P14',
   },
   {
@@ -211,6 +231,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'live-event',
     title: 'Fireside 3: Women in mining leadership',
+    isPaid: false,
     copyId: 'P15',
   },
   {
@@ -222,6 +243,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: 'Phase 1 close, Phase 2 starts Monday',
+    isPaid: true,
+    paidNotes: 'Sponsored',
     copyId: 'P16',
   },
 
@@ -235,6 +258,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'video-clip',
     title: 'Fireside 3 highlight clip',
+    isPaid: false,
     copyId: 'P17',
   },
   {
@@ -246,6 +270,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'carousel',
     title: 'Sponsor 1 announcement, Title Sponsor confirmed',
+    isPaid: true,
+    paidNotes: 'Boost on confirmation',
     copyId: 'P18',
   },
   {
@@ -257,6 +283,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'announcement-image',
     title: 'Mining house CEO 1 confirmed as Day 1 keynote',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P19',
   },
   {
@@ -268,6 +296,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'live-event',
     title: 'Fireside 4: The CEO perspective',
+    isPaid: false,
     copyId: 'P20',
   },
   {
@@ -279,6 +308,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: 'Week 5 recap, 3 sponsors confirmed against 6',
+    isPaid: true,
+    paidNotes: 'Sponsored',
     copyId: 'P21',
   },
 
@@ -292,6 +323,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'video-clip',
     title: 'Fireside 4 highlight clip',
+    isPaid: false,
     copyId: 'P22',
   },
   {
@@ -303,6 +335,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'carousel',
     title: 'Sponsor 2 announcement, Investment Partner',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P23',
   },
   {
@@ -314,6 +348,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'announcement-image',
     title: 'Mining house CEO 2 confirmed',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P24',
   },
   {
@@ -325,6 +361,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'live-event',
     title: 'Fireside 5: The investor view',
+    isPaid: false,
     copyId: 'P25',
   },
   {
@@ -336,6 +373,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: 'First 200 registrations milestone',
+    isPaid: true,
+    paidNotes: 'Sponsored',
     copyId: 'P26',
   },
 
@@ -349,6 +388,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'video-clip',
     title: 'Fireside 5 highlight clip',
+    isPaid: false,
     copyId: 'P27',
   },
   {
@@ -360,6 +400,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'carousel',
     title: 'Council of 16 kings endorsement reveal',
+    isPaid: false,
     copyId: 'P28',
   },
   {
@@ -371,6 +412,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'carousel',
     title: 'Sponsor 3 announcement, Province Partner',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P29',
   },
   {
@@ -382,6 +425,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'live-event',
     title: 'Fireside 6: Host communities, what they need',
+    isPaid: false,
     copyId: 'P30',
   },
   {
@@ -393,7 +437,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'announcement-image',
     title: 'CEO Recognition Ceremony nominees announced',
-    notes: 'Pending SAMCA legal sign-off',
+    isPaid: true,
+    paidNotes: 'Sponsored. Pending SAMCA legal sign-off',
     copyId: 'P31',
   },
 
@@ -407,6 +452,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'video-clip',
     title: 'Fireside 6 highlight clip',
+    isPaid: false,
     copyId: 'P32',
   },
   {
@@ -418,6 +464,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'carousel',
     title: 'Sponsor 4 announcement, OEM Partner',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P33',
   },
   {
@@ -429,6 +477,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'carousel',
     title: 'Academia and research panel reveal',
+    isPaid: false,
     copyId: 'P34',
   },
   {
@@ -440,6 +489,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'live-event',
     title: 'Fireside 7: Academia and the next generation',
+    isPaid: false,
     copyId: 'P35',
   },
   {
@@ -451,6 +501,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: 'Phase 2 close, programme reveals next week',
+    isPaid: true,
+    paidNotes: 'Sponsored',
     copyId: 'P36',
   },
 
@@ -464,6 +516,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'video-clip',
     title: 'Fireside 7 highlight clip',
+    isPaid: false,
     copyId: 'P37',
   },
   {
@@ -475,6 +528,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'carousel',
     title: 'Day 1 programme reveal carousel, Future of Mining keynote',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P38',
   },
   {
@@ -486,6 +541,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'investment-attraction',
     format: 'carousel',
     title: 'Sponsor 5 announcement, Enterprise Partner',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P39',
   },
   {
@@ -497,6 +554,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'live-event',
     title: 'Fireside 8: The Day 1 panel preview',
+    isPaid: false,
     copyId: 'P40',
   },
   {
@@ -508,6 +566,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: 'Countdown begins, 24 days to summit',
+    isPaid: true,
+    paidNotes: 'Sponsored',
     copyId: 'P41',
   },
 
@@ -521,6 +581,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'video-clip',
     title: 'Fireside 8 highlight clip',
+    isPaid: false,
     copyId: 'P42',
   },
   {
@@ -532,6 +593,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'carousel',
     title: 'Day 2 programme reveal carousel, Women Leadership Keynote',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P43',
   },
   {
@@ -543,6 +606,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'carousel',
     title: 'Sponsor 6 confirmed, full sponsor lineup complete',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P44',
   },
   {
@@ -554,6 +619,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'live-event',
     title: 'Fireside 9: Youth Forum preview, the next 20 years',
+    isPaid: false,
     copyId: 'P45',
   },
   {
@@ -565,6 +631,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: '17 days to summit, registration closes 15 July',
+    isPaid: true,
+    paidNotes: 'Sponsored',
     copyId: 'P46',
   },
 
@@ -578,6 +646,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'inclusive-participation',
     format: 'video-clip',
     title: 'Fireside 9 highlight clip',
+    isPaid: false,
     copyId: 'P47',
   },
   {
@@ -589,6 +658,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'carousel',
     title: 'Day 3 programme reveal, Mayoral Golf Day and closing',
+    isPaid: true,
+    paidNotes: 'Boost',
     copyId: 'P48',
   },
   {
@@ -600,6 +671,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'announcement-image',
     title: 'Kings Honour Cocktail invitation list locked',
+    isPaid: false,
     copyId: 'P49',
   },
   {
@@ -611,6 +683,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'live-event',
     title: 'Fireside 10: Kings Honour Cocktail, why it matters',
+    isPaid: false,
     copyId: 'P50',
   },
   {
@@ -621,7 +694,9 @@ export const calendar: CalendarPost[] = [
     day: 'Fri',
     pillar: 'industry-collaboration',
     format: 'recap-card',
-    title: '10 days to summit, the last call begins',
+    title: '10 days to summit, last paid push',
+    isPaid: true,
+    paidNotes: 'Sponsored. Full budget shift to conversion',
     copyId: 'P51',
   },
 
@@ -635,6 +710,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'community-development',
     format: 'video-clip',
     title: 'Fireside 10 highlight clip',
+    isPaid: false,
     copyId: 'P52',
   },
   {
@@ -646,6 +722,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'document-carousel',
     title: 'Final speaker confirmations and full programme PDF',
+    isPaid: false,
     copyId: 'P53',
   },
   {
@@ -657,6 +734,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'announcement-image',
     title: 'Registration closes tonight at midnight',
+    isPaid: true,
+    paidNotes: 'Hard CTA, conversion campaign',
     copyId: 'P54',
   },
   {
@@ -668,6 +747,8 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'recap-card',
     title: 'Doors open Monday, here is what to expect',
+    isPaid: true,
+    paidNotes: 'Sponsored',
     copyId: 'P55',
   },
   {
@@ -679,6 +760,7 @@ export const calendar: CalendarPost[] = [
     pillar: 'industry-collaboration',
     format: 'event-coverage',
     title: 'Live from Sun City, Day 1 opens',
+    isPaid: false,
     copyId: 'P56',
   },
 ]
@@ -706,7 +788,10 @@ function dayOrder(d: CalendarDay): number {
 
 export const calendarStats = {
   totalPosts: calendar.length,
-  firesideConversations: calendar.filter((p) => p.format === 'live-event').length,
+  paidPosts: calendar.filter((p) => p.isPaid).length,
+  organicPosts: calendar.filter((p) => !p.isPaid).length,
+  paidSpendZAR: 114000,
+  paidSpendMonthlyZAR: 38000,
   engagementRateLow: 4,
   engagementRateHigh: 8,
   followerTarget: 500,

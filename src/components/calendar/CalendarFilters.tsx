@@ -2,7 +2,7 @@ import { brand } from '../../lib/brand'
 import { pillarOrder, pillars } from '../../data/pillars'
 import { phaseOrder, phases, type PhaseKey } from '../../data/phases'
 import { useCompact } from './useCompact'
-import { defaultFilters, type FilterState } from './filterTypes'
+import { defaultFilters, type FilterState, type PaidFilter } from './filterTypes'
 
 type Props = {
   filters: FilterState
@@ -14,7 +14,7 @@ type Props = {
 export default function CalendarFilters({ filters, setFilters, matchedCount, totalCount }: Props) {
   const compact = useCompact()
   const reset = () => setFilters(defaultFilters)
-  const isFiltered = filters.phase !== 'all' || filters.pillar !== 'all'
+  const isFiltered = filters.phase !== 'all' || filters.pillar !== 'all' || filters.paid !== 'all'
 
   return (
     <section
@@ -70,6 +70,18 @@ export default function CalendarFilters({ filters, setFilters, matchedCount, tot
               onClick={() => setFilters({ ...filters, pillar: key })}
               label={pillars[key].short}
               accent={pillars[key].accent}
+            />
+          ))}
+        </FilterGroup>
+
+        <FilterGroup label="Spend">
+          {(['all', 'paid', 'organic'] as PaidFilter[]).map((p) => (
+            <Pill
+              key={p}
+              active={filters.paid === p}
+              onClick={() => setFilters({ ...filters, paid: p })}
+              label={p === 'all' ? 'All' : p === 'paid' ? 'Paid' : 'Organic'}
+              accent={p === 'paid' ? brand.colors.darkBrown : brand.colors.mutedGreen}
             />
           ))}
         </FilterGroup>
