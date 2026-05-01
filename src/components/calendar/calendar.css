@@ -3,6 +3,10 @@
    inline styles cannot express cleanly: pseudo-selectors and screen-reader
    utilities. */
 
+:root {
+  --z-skip-link: 900;
+}
+
 [data-focus-ring]:focus-visible,
 .atlas-focus-ring:focus-visible {
   box-shadow: 0 0 0 3px #264527, 0 0 0 5px #E2BB39 !important;
@@ -34,7 +38,7 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 999px;
-  z-index: 1000;
+  z-index: var(--z-skip-link);
   box-shadow: 0 0 0 3px #E2BB39;
 }
 

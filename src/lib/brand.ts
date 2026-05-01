@@ -26,5 +26,14 @@ export const brand = {
   type,
 } as const;
 
+export const zLayers = {
+  grain: 1,
+  content: 2,
+  stickyHeader: 4,
+  scrollProgress: 50,
+  skipLink: 900,
+  modal: 1000,
+} as const
+
 export { type } from './typography'
 export type { TypeRole } from './typography'

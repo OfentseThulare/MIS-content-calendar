@@ -1,8 +1,9 @@
-import { brand } from '../../lib/brand'
+import { brand, zLayers } from '../../lib/brand'
 
 export default function CalendarHeader() {
   return (
-    <div
+    <header
+      aria-label="Mining Integration Summit 2026 LinkedIn content calendar"
       style={{
         height: 56,
         background: brand.colors.darkGreen,
@@ -16,10 +17,10 @@ export default function CalendarHeader() {
         textTransform: 'uppercase',
         position: 'sticky',
         top: 3,
-        zIndex: 4,
+        zIndex: zLayers.stickyHeader,
       }}
     >
       The Mining Integration Summit 2026 · LinkedIn Content Calendar
-    </div>
+    </header>
   )
 }

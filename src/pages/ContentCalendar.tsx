@@ -25,7 +25,11 @@ export default function ContentCalendar() {
   const [filters, setFilters] = useState<FilterState>(() => readHashFilters())
 
   useEffect(() => {
+    const previous = document.title
     document.title = PAGE_TITLE
+    return () => {
+      document.title = previous
+    }
   }, [])
 
   useEffect(() => {
@@ -57,9 +61,9 @@ export default function ContentCalendar() {
       <CalendarHeader />
 
       <Body>
-        <header aria-label="Calendar overview">
+        <section aria-label="Calendar overview">
           <CalendarHero />
-        </header>
+        </section>
 
         <main id="main-content">
           <SectionHeading id="phases-heading">Campaign phases</SectionHeading>

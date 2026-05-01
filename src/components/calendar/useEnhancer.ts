@@ -95,8 +95,20 @@ export function useEnhancer() {
       magneticHandlers.push({ el, move, leave })
     })
 
+    // Refresh ScrollTrigger when the layout changes (compact breakpoint, font load, etc.).
+    let resizeRaf = 0
+    const onResize = () => {
+      cancelAnimationFrame(resizeRaf)
+      resizeRaf = requestAnimationFrame(() => {
+        ScrollTrigger.refresh()
+      })
+    }
+    window.addEventListener('resize', onResize)
+
     return () => {
       cancelAnimationFrame(raf)
+      cancelAnimationFrame(resizeRaf)
+      window.removeEventListener('resize', onResize)
       lenis.destroy()
       rowTriggers.forEach((t) => t.kill())
       ruleTriggers.forEach((t) => t.kill())

@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
-import { brand } from '../../lib/brand'
+import { brand, zLayers } from '../../lib/brand'
 import { CompactContext, useCompactValue } from './useCompact'
 
 const CANVAS_WIDTH = 1920
@@ -50,14 +50,22 @@ export default function CalendarShell({ children }: Props) {
   }, [])
 
   useEffect(() => {
-    const onScroll = () => {
+    let raf = 0
+    const compute = () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight
       const value = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0
       setProgress(Math.max(0, Math.min(100, value)))
     }
-    onScroll()
+    const onScroll = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(compute)
+    }
+    compute()
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      cancelAnimationFrame(raf)
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   useEffect(() => {
@@ -96,7 +104,7 @@ export default function CalendarShell({ children }: Props) {
             right: 0,
             height: 3,
             background: `${brand.colors.darkGreen}33`,
-            zIndex: 50,
+            zIndex: zLayers.scrollProgress,
           }}
         >
           <div
@@ -120,7 +128,7 @@ export default function CalendarShell({ children }: Props) {
             mixBlendMode: 'multiply',
             backgroundImage:
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='1'/></svg>\")",
-            zIndex: 1,
+            zIndex: zLayers.grain,
           }}
         />
 
@@ -133,7 +141,7 @@ export default function CalendarShell({ children }: Props) {
               paddingTop: SAFE_BUFFER,
               paddingBottom: SAFE_BUFFER,
               position: 'relative',
-              zIndex: 2,
+              zIndex: zLayers.content,
             }}
           >
             {children}
@@ -147,7 +155,7 @@ export default function CalendarShell({ children }: Props) {
               paddingBottom: SAFE_BUFFER,
               height: wrapperHeight,
               position: 'relative',
-              zIndex: 2,
+              zIndex: zLayers.content,
             }}
           >
             <div

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { brand } from '../../lib/brand'
+import { brand, zLayers } from '../../lib/brand'
 import { pillars } from '../../data/pillars'
 import { phases } from '../../data/phases'
 import { formatLabel, type CalendarPost } from '../../data/calendar'
@@ -22,6 +22,31 @@ export default function PostDetailModal({ post, onClose }: Props) {
       if (e.key === 'Escape') {
         e.preventDefault()
         onClose()
+        return
+      }
+      if (e.key === 'Tab') {
+        const panel = closeRef.current?.closest('[role="dialog"]') as HTMLElement | null
+        if (!panel) return
+        const focusable = Array.from(
+          panel.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+          ),
+        ).filter((el) => el.offsetParent !== null)
+        if (focusable.length === 0) {
+          e.preventDefault()
+          closeRef.current?.focus()
+          return
+        }
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+        const active = document.activeElement as HTMLElement | null
+        if (e.shiftKey && active === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && active === last) {
+          e.preventDefault()
+          first.focus()
+        }
       }
     }
     window.addEventListener('keydown', onKey)
@@ -50,7 +75,7 @@ export default function PostDetailModal({ post, onClose }: Props) {
       style={{
         position: 'fixed',
         inset: 0,
-        zIndex: 1000,
+        zIndex: zLayers.modal,
         background: 'rgba(38, 69, 39, 0.6)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
@@ -180,7 +205,10 @@ export default function PostDetailModal({ post, onClose }: Props) {
             <Section title="Hook">{draft.hook}</Section>
             <Section title="Body">
               {draft.body.split('\n\n').map((para, i) => (
-                <p key={i} style={{ margin: 0, marginBottom: 10, fontSize: 15, lineHeight: 1.6 }}>
+                <p
+                  key={`${post.id}-para-${i}-${para.slice(0, 24)}`}
+                  style={{ margin: 0, marginBottom: 10, fontSize: 15, lineHeight: 1.6 }}
+                >
                   {para}
                 </p>
               ))}
